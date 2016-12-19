@@ -320,7 +320,7 @@ html html {
   padding: 20px 0;
 }
 .about_box dl:nth-child(even) {
-  background: #f4f4f4;
+  background: #fefefe;
 }
 @media (min-width: 750px) {
   .about_box dt {
