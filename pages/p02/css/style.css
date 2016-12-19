@@ -1,0 +1,199 @@
+﻿@charset "utf-8";
+
+/* ===================================================================
+CSS information
+
+ file name  : style.css
+ style info : 基本スタイル設定用
+=================================================================== */
+
+/*----------------------------------------------------
+ 基本設定、リンクカラー、レイアウト、横幅設定など
+----------------------------------------------------*/
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	font-family:"新細明體";
+	font-size: 76%;
+	color: #333333;
+	line-height: 140%;
+	text-align: center;
+}
+
+*: first-child + html body {	/* FOR IE7 */
+	font-family: "メイリオ", "Meiryo";
+}
+
+#skin {
+	width: 920px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+#container {
+	width: 898px;
+	margin: 0 auto;
+	overflow: hidden;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	display: block;
+	background-color: #f6e5f3;
+}
+
+a {
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+}
+
+img {
+}
+
+/*----------------------------------------------------
+ 汎用class
+----------------------------------------------------*/
+.imgR {
+	float: right;
+}
+
+.imgL {
+	float: left;
+}
+
+img.photo {
+	border: 2px solid #dcdbca;
+}
+
+img.logo {
+	border: 1px solid #d8d8d8;
+}
+
+.btn {
+	text-align: center;
+	cursor: pointer;
+}
+
+.list {
+	padding-left: 1em;
+	text-indent: -1em;
+}
+
+.border {
+	border: 1px solid #cccccc;
+}
+
+.noborder {
+	border: none;
+}
+
+ul.anchor {
+	clear: both;
+	overflow: hidden;
+	display: block;
+}
+
+ul.anchor li {
+	float: left;
+	padding-left: 14px;
+	margin-right: 20px;
+	background: url(../img/common/li_anchor.gif) no-repeat 0 2px;
+}
+
+table.border,
+table.border th,
+table.border td {
+	border: 1px solid #cccccc;
+	border-collapse: collapse;
+}
+
+/* イオンモールカラーテーブル */
+table.mallcolor {
+	border: 1px solid #cccccc;
+	border-collapse: collapse;
+}
+
+table.mallcolor th,
+table.mallcolor td {
+	padding: 5px;
+	border: 1px solid #cccccc;
+	border-collapse: collapse;
+}
+
+table.mallcolor th {
+	color: #fff;
+	background-color: #b50080;
+}
+
+table.mallcolor tr.odd {
+	background-color: #ffe3f7;
+}
+
+.gotoTop {
+	margin: 20px 0;
+	text-align: right;
+}
+
+.right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+/*----------------------------------------------------
+	汎用フォント
+----------------------------------------------------*/
+.fontRed {
+	color: #cc0000;
+}
+
+.fontGreen {
+	color: #00aa36;
+}
+
+.fontBlue {
+	color: #333399;
+}
+
+.noProp {
+	font-family: "ＭＳ ゴシック", "Osaka－等幅";
+}
+
+.fontS {
+	font-size: 84%;
+}
+
+.fontL {
+	font-size: 117%;
+}
+
+.sat {
+	color: #003399;
+	background-color: #ebf5ff;
+}
+
+.sun {
+	color: #cc3333;
+	background-color: #ffecec;
+}
+
+.calDate {
+	font-size: 200%;
+	font-weight: bold;
+}

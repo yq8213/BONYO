@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>kidcoland童創時代</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <header>
+        <article class="container">
+            <div class="logobox">
+                <div class="mb_nav_btn"><span></span></div>
+                <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="kidcoland童創時代"></a></div>
+                <div class="mb_search_btn"><span class="iconfont icon_search"></span></div>
+            </div>
+        </article>
+        <article class="topnav">
+            <ul class="container">
+                <li class="searchbox">
+                    <input class="search" type="search" placeholder="請輸入關鍵字">
+                    <button class="search_btn" type="submit"><span class="iconfont icon_search"></span></button>
+                </li>
+                <li class="topnav_btn">
+                    <a href="login.html">會員登入</a>
+                    <!--若已登入
+                    <a class="pc_show" href="login.html">會員中心</a>
+                    <a class="mb_show" href="login.html">會員登出</a>
+                    -->
+                </li>
+                <li class="topnav_btn"><a href="register_step1.html">免費註冊</a></li>
+                <!--若已登入顯示會員功能-->
+                <li class="member_nav">
+                    <div class="member_name">
+                        <h2>會員名字</h2>
+                        <p>
+                            目前剩餘點數
+                            <span>1250</span>
+                            <font>累計回饋積分：23</font>
+                        </p>
+                    </div>
+                    <!--依照會員權限顯示出可使用的功能選單-->
+                    <ul class="member_pages">
+                        <li><a href="member_class.html">建立活動</a></li>
+                        <li><a href="member_classplan.html">建立課程</a></li>
+                        <li><a href="member_classcoupon.html">優惠方案</a></li>
+                        <li><a href="member_classrobot.html">租借器材</a></li>
+                        <li><a href="member_classroom.html">租借教室</a></li>
+                        <li><a href="member_classlist.html">查看課程</a></li>
+                        <li><a href="member_myclassrecord.html">學習歷程</a></li>
+                        <li><a href="member_mypayrecord.html">繳費紀錄</a></li>
+                        <li><a href="member_mypayrecord.html">老師評價</a></li>
+                        <li><a href="member_teamclass.html">揪團上課</a></li>
+                        <li class="current"><a href="member_teamrobot.html">團購互動智能</a></li>
+                        <li><a href="member_classrecord.html">查看學生學習歷程</a></li>
+                        <li><a href="member_payrecord.html">查看學生繳費紀錄</a></li>
+                        <li><a href="member_manageroom.html">教室管理</a></li>
+                        <li><a href="member_managerobot.html">器材管理</a></li>
+                    </ul>
+                </li>
+            </ul>            
+        </article>
+    </header>
+    <main class="member_bg">
+        <article class="container">
+            <div class="memberbtnlist">
+                <div class="member_name">
+                    <h2>會員名字<i>登出</i></h2>
+                    <p>
+                        目前剩餘點數
+                        <span>1250</span>
+                        <font>累計回饋積分：23</font>
+                    </p>
+                </div>
+                <!--依照會員權限顯示出可使用的功能選單-->
+                <ul class="member_pages">
+                    <li><a href="member_class.html">建立活動</a></li>
+                    <li><a href="member_classplan.html">建立課程</a></li>
+                    <li><a href="member_classcoupon.html">優惠方案</a></li>
+                    <li><a href="member_classrobot.html">租借器材</a></li>
+                    <li><a href="member_classroom.html">租借教室</a></li>
+                    <li><a href="member_classlist.html">查看課程</a></li>
+                    <li><a href="member_myclassrecord.html">學習歷程</a></li>
+                    <li><a href="member_mypayrecord.html">繳費紀錄</a></li>
+                    <li><a href="member_mypayrecord.html">老師評價</a></li>
+                    <li><a href="member_teamclass.html">揪團上課</a></li>
+                    <li class="current"><a href="member_teamrobot.html">團購互動智能</a></li>
+                    <li><a href="member_classrecord.html">查看學生學習歷程</a></li>
+                    <li><a href="member_payrecord.html">查看學生繳費紀錄</a></li>
+                    <li><a href="member_manageroom.html">教室管理</a></li>
+                    <li><a href="member_managerobot.html">器材管理</a></li>
+                </ul>
+            </div>
+            <div class="memberbox tabbox">
+                <ul class="class_type">
+                    <li class="current"><a href="#tab1">揪團中</a></li>
+                    <li><a href="#tab2">找揪團</a></li>
+                    <li><a href="#tab3">所有智能組合</a></li>
+                </ul>
+                <section>
+                    <div id="tab1" class="class_list">
+                        <dl>
+                        <a href="member_robotinfo.html">
+                            <dt><img src="images/robot_pic.jpg" alt="dash"></dt>
+                            <dd>
+                                <p>NT8640</p>
+                                <h2>Dash智能組合</h2>
+                                <span class="txt_blue">已出貨</span>
+                                <p>配件：充電線/推土機/30天教學影片</p>
+                            </dd>                    
+                        </a>
+                        </dl>
+                        <dl>
+                        <a href="member_robotinfo.html">
+                            <dt><img src="images/robot_pic.jpg" alt="dash"></dt>
+                            <dd>
+                                <p>NT8640</p>
+                                <h2>Dash智能組合</h2>
+                                <span class="txt_yellow">出貨中</span>
+                                <p>配件：充電線/推土機/30天教學影片</p>
+                            </dd>                    
+                        </a>
+                        </dl>
+                        <dl>
+                        <a href="member_robotinfo.html">
+                            <dt><img src="images/robot_pic.jpg" alt="dash"></dt>
+                            <dd>
+                                <p>NT8640</p>
+                                <h2>Dash智能組合</h2>
+                                <span>1/3</span>
+                                <p>配件：充電線/推土機/30天教學影片</p>
+                            </dd>                    
+                        </a>
+                        </dl>                        
+                    </div>
+                    <div id="tab2" class="class_list">
+                        <dl>
+                        <a href="member_addrobot.html">
+                            <dt><img src="images/robot_pic.jpg" alt="dash"></dt>
+                            <dd>
+                                <p>NT8640</p>
+                                <h2>Dash智能組合</h2>
+                                <span>1/3</span>
+                                <p>配件：充電線/推土機/30天教學影片</p>
+                                <div class="m-t"><a href="#" class="manage_btn">加入</a></div>
+                            </dd>
+                        </a>
+                        </dl>
+                        <dl>
+                        <a href="member_addrobot.html">
+                            <dt><img src="images/robot_pic.jpg" alt="dash"></dt>
+                            <dd>
+                                <p>NT8640</p>
+                                <h2>Dash智能組合</h2>
+                                <span>1/3</span>
+                                <p>配件：充電線/推土機/30天教學影片</p>
+                                <div class="m-t"><a href="#" class="manage_btn">加入</a></div>
+                            </dd>
+                        </a>
+                        </dl>
+                        <dl>
+                        <a href="member_addrobot.html">
+                            <dt><img src="images/robot_pic.jpg" alt="dash"></dt>
+                            <dd>
+                                <p>NT8640</p>
+                                <h2>Dash智能組合</h2>
+                                <span>1/3</span>
+                                <p>配件：充電線/推土機/30天教學影片</p>
+                                <div class="m-t"><a href="#" class="manage_btn">加入</a></div>
+                            </dd>
+                        </a>
+                        </dl>
+                        <dl>
+                        <a href="member_addrobot.html">
+                            <dt><img src="images/robot_pic.jpg" alt="dash"></dt>
+                            <dd>
+                                <p>NT8640</p>
+                                <h2>Dash智能組合</h2>
+                                <span>1/3</span>
+                                <p>配件：充電線/推土機/30天教學影片</p>
+                                <div class="m-t"><a href="#" class="manage_btn">加入</a></div>
+                            </dd>
+                        </a>
+                        </dl>
+                    </div>
+                    <div id="tab3" class="class_list">
+                        <dl>
+                        <a href="member_addrobot.html">
+                            <dt><img src="images/robot_pic.jpg" alt="dash"></dt>
+                            <dd>
+                                <p>NT8640</p>
+                                <h2>Dash智能組合</h2>
+                                <span>滿三人出貨</span>
+                                <p>配件：充電線/推土機/30天教學影片</p>
+                                <div class="m-t"><a href="member_addrobot.html" class="manage_btn">我要團購</a></div>
+                            </dd>
+                        </a>
+                        </dl>
+                        <dl>
+                        <a href="member_addrobot.html">
+                            <dt><img src="images/robot_pic.jpg" alt="dash"></dt>
+                            <dd>
+                                <p>NT8640</p>
+                                <h2>Dash智能組合</h2>
+                                <span>滿三人出貨</span>
+                                <p>配件：充電線/推土機/30天教學影片</p>
+                                <div class="m-t"><a href="member_addrobot.html" class="manage_btn">我要團購</a></div>
+                            </dd>
+                        </a>
+                        </dl>
+                        <dl>
+                        <a href="member_addrobot.html">
+                            <dt><img src="images/robot_pic.jpg" alt="dash"></dt>
+                            <dd>
+                                <p>NT8640</p>
+                                <h2>Dash智能組合</h2>
+                                <span>滿三人出貨</span>
+                                <p>配件：充電線/推土機/30天教學影片</p>
+                                <div class="m-t"><a href="member_addrobot.html" class="manage_btn">我要團購</a></div>
+                            </dd>
+                        </a>
+                        </dl>
+                        <dl>
+                        <a href="member_addrobot.html">
+                            <dt><img src="images/robot_pic.jpg" alt="dash"></dt>
+                            <dd>
+                                <p>NT8640</p>
+                                <h2>Dash智能組合</h2>
+                                <span>滿三人出貨</span>
+                                <p>配件：充電線/推土機/30天教學影片</p>
+                                <div class="m-t"><a href="member_addrobot.html" class="manage_btn">我要團購</a></div>
+                            </dd>
+                        </a>
+                        </dl>
+                    </div>
+                </section>
+                <div class="page_number">
+                    <ul>
+                        <li class="page_prev"><a href="#" class="page_btn">‹</a></li>
+                        <li><a href="#" class="page_btn current">1</a></li>
+                        <li><a href="#" class="page_btn">2</a></li>
+                        <li><a href="#" class="page_btn">3</a></li>
+                        <li><a href="#" class="page_btn">4</a></li>
+                        <li><a href="#" class="page_btn">5</a></li>
+                        <li class="page_next"><a href="#" class="page_btn">›</a></li>
+                    </ul>
+                </div>
+            </div>            
+        </article>
+    </main>
+    <footer>
+        <article class="container">
+        <div class="ft_left">
+            <div class="ft_logo"><a href="#"><img src="images/logo.svg" alt="kidcoland童創時代"></a></div>
+            <ul class="ft_nav">
+                <li><a href="http://www.kidcoland.com/curriculum.php">關於課程</a></li>
+                <li><a href="http://www.kidcoland.com/robot.php">智能教具</a></li>
+                <li><a href="#">隱私權聲明</a></li>
+                <!--li><a href="#">聯絡我們</a></li-->
+            </ul>            
+            <div class="ft_copyright">Copyright 2016 © KidColand Inc. 童創時代</div>
+        </div>
+        <div class="ft_right">
+            <div class="ft_gotop"><a><img src="images/gotop.png"></a></div>
+        </div>
+        </article>
+    </footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/base.js"></script>
+</html>

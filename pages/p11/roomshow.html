@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>客房介紹</title>
+    <meta name="keywords" content="客房介紹">
+    <meta name="description" content="客房介紹">
+    <meta name="author" content="" />
+    <meta name="copyright" content="" />
+  	<link href="css/css.css" rel="stylesheet" type="text/css" />
+		<link href="css/menu.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="jquery/1.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.carouFredSel-5.5.0-packed.js"></script>
+		<script type="text/javascript" src="js/pic_bd.js"></script> 
+		<script type="text/javascript" src="js/menu_hover.js"></script>
+
+  </head>
+<body>
+ <!--頁頭開始-->
+<div id="header">
+	<ul>
+  	<li><a href="contact.html">CONTACT US</a></li>
+  	<li><a href="sitemap.html">SITE MAP</a></li>
+  	<li><a href="index.html">HOME</a></li>
+  </ul>
+</div>
+ <!--頁頭結束-->
+ <!--頁腳開始-->
+<div id="footer">
+ 	<dt class="logo"><img src="images/logo.gif" /></dt>
+  <dt>高雄市鼓山區裕誠路1789號<br />Tel / 07-5523322  Fax / 07-5548699</dt>
+  <dd>Copyright © 2013 易訂通科技有限公司 All Rights Reserved.</dd>
+</div>
+ <!--頁腳結束-->
+ <!--主選單開始-->
+<script type="text/javascript">
+    $(document).ready(function(){
+      if($(window).height()<578){
+      imgnowww=405/(578/($(window).height()));
+      }
+  
+      $("#menu_close").css("padding-top",($(window).height()-300)/2);
+  
+    //MENU
+    $("#div_menu").css("height",$(window).height());
+      $("#div_menu_2").css("height",$(window).height());
+          $("#div_menu").animate({"width": 7},500);
+  
+      $("#menu_btn").animate({"width": 90},500);
+    $("#menu_btn").click(function(){
+          $(".menu_open").css("padding-top",($(window).height())/10);
+      $("#menu_btn").animate({"width": 0},500);
+          $("#div_menu").animate({"width": 283},500);
+          $("#div_menu_2").animate({"margin-left": "0px"},500,function(){
+        $("#menu_close").animate({"width":88},500);
+      });
+      });
+  
+    $("#menu_close").click(function(){
+          $("#div_menu").animate({"width": 7},500);
+      $("#menu_close").css({"width":0});
+          $("#div_menu_2").animate({"margin-left": "0px"},500,function(){
+        $("#menu_btn").animate({"width": 90},500);
+  
+      });
+      });
+    
+      $(window).bind("resize", function() {
+      $("#div_menu").css("height",$(window).height());
+      $("#div_menu_2").css("height",$(window).height());
+  
+  
+      $(".menu_open").css("padding-top",($(window).height())/10);
+      $("#menu_close").css("padding-top",($(window).height()-300)/2);
+      });
+    });
+  </script>
+  <div class="menu">
+    <span id="menu_btn">
+    <div class="_menu_hover">
+    <img src="images/menubt_off.png" width="90" height="147" border="0"   />
+    <img src="images/menubt_on.png" width="90" height="147" border="0"   />
+    </div>
+    </span>
+  </div>
+<div id="menu_close">
+    <div class="_menu_hover">
+    <img src="images/menuclose_off.png" width="88" height="147" border="0" />
+    <img src="images/menuclose_on.png" width="88" height="147" border="0" />
+    </div>
+  </div>
+<div id="div_menu">
+    <div id="div_menu_2">
+            <div class="menu_open">
+               <ul>
+                <li>
+                <div class="_menu_hover">
+                <a href="about.html"><img src="images/bt01_off.png" width="251" height="84" border="0" /></a>
+                <img src="images/bt01_on.png" width="251" height="84" border="0" />
+                </div>
+                </li>
+                <li>
+                <div class="_menu_hover">
+                <a href="rooms.html"><img src="images/bt02_off.png" width="251" height="84" border="0" /></a>
+                <img src="images/bt02_on.png" width="251" height="84" border="0" />
+                </div>
+                </li>
+                <li>
+                <div class="_menu_hover">
+                <a href="news.html"><img src="images/bt03_off.png" width="251" height="84" border="0" /></a>
+                <img src="images/bt03_on.png" width="251" height="84" border="0" />
+                </div>
+                </li>
+                <li>
+                <div class="_menu_hover">
+                <a href="Preferential.html"><img src="images/bt04_off.png" width="251" height="84" border="0" /></a>
+                <img src="images/bt04_on.png" width="251" height="84" border="0" />
+                </div>
+                </li>
+                <li>
+                <div class="_menu_hover">
+                <a href="contact.html"><img src="images/bt05_off.png" width="251" height="84" border="0" /></a>
+                <img src="images/bt05_on.png" width="251" height="84" border="0" />
+                </div>
+                </li>
+                <li>
+                <div class="_menu_hover">
+                <a href="#"><img src="images/bt06_off.png" width="251" height="84" border="0" /></a>
+                <img src="images/bt06_on.png" width="251" height="84" border="0" />
+                </div>
+                </li>
+               </ul>
+            </div>
+    </div>
+  </div>
+ <!--主選單結束-->
+ <!--內容開始-->
+<div id="roomshow">
+	<div class="title">
+  	<h1>風呂套房</h1>
+    住宿 NT$ 7200 | 休息 NT$ 1200
+    <a href="rooms.html" class="linkrooms">看其他房型照片</a>
+  </div>
+  <ul>
+  	<li><a href="#">詳細介紹</a></li>
+    <li><a href="#">住宿須知</a></li>
+    <li><a href="#" class="red">線上訂房</a></li>
+  </ul>
+  <div class="content">
+  	半戶外式泡湯池、king size雙人床、42吋液晶電視、隨選視訊電影頻道、冰箱mini吧檯(免費提供礦泉水、飲料、餅乾)、FRP雙人按摩浴缸、蒸氣室、spa維淇浴。<br />(同等級房型依設計不同設備略有不同，請依現場實際提供為準)
+  </div>
+</div>          
+ <!--內容結束-->
+ <!--背景圖片輪播開始-->
+  <div id="all_bd" >
+    <div class="_imgs"><img src="images/rooms_bd01.jpg" style="display:none;"></div>
+    <div class="_imgs"><img src="images/rooms_bd02.jpg" style="display:none;"></div>
+    <div class="_imgs"><img src="images/rooms_bd03.jpg" style="display:none;"></div>
+    <div class="_imgs"><img src="images/rooms_bd04.jpg" style="display:none;"></div>
+    <div class="_imgs"><img src="images/rooms_bd05.jpg" style="display:none;"></div>
+    <div class="_imgs"><img src="images/rooms_bd06.jpg" style="display:none;"></div>
+    <div class="_imgs"><img src="images/rooms_bd07.jpg" style="display:none;"></div>
+    <div class="_imgs"><img src="images/rooms_bd08.jpg" style="display:none;"></div>
+  </div>
+  <!--背景圖片輪播結束-->
+</body>
+</html>

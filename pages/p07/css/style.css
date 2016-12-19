@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+body,
+div,
+hr,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+img,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin:0;
+  padding:0;
+}
+
+body{
+	background:url(../images/bg_all.jpg);
+}
+a img{
+	border:none;
+}
+hr{
+	clear:both;
+	visibility:hidden;
+}
+.top_icon img{
+	vertical-align:middle;
+}
+.top_icon {
+	font-size:12px;
+	width:900px;
+	margin:10px auto 0;
+	text-align:right;
+}
+.top_icon a{
+	color:#000;
+	text-decoration:none;
+}
+.top_icon a:hover{
+	color:#666;
+}
+
+#footer,#footer a{
+	height:100px;
+	background:#3e4048;
+	color:#9f9f9f;
+	text-decoration:none;
+	font-size:11px;
+	text-align:center;
+	padding-top:15px;
+}
+#footer a:hover{
+	color:#0F0;
+}
+#footer div.foot_icon{
+	width:400px;
+	padding-left:75px;
+	margin:10px auto;
+}
+#footer p{
+	float:left;
+}
+#footer div.MINI{
+	float:left;
+	width:71px;
+}
+#header{
+	background:url(../images/bg_header.jpg) no-repeat;
+	height:145px;
+	padding-top:35px;
+	width:963px;
+	padding-left:47px;
+	margin:0 auto;
+}
+#header ul,#header li{
+	list-style:none;
+}
+#header li{
+	float:left;
+	width:151px;
+	height:108px;
+}
+#content{
+	width:945px;
+	margin:20px auto;
+}
+#content h2{
+	font-size:24px;
+	font-weight:bold;
+	font-family:"華康中黑體";
+	color:#5f1109;
+	margin-left:30px;
+	margin-bottom:10px;
+}

@@ -1,0 +1,72 @@
+/* line 1, ../sass/quickpager.sass */
+#pageNavbox {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 50px;
+}
+
+/* line 8, ../sass/quickpager.sass */
+.simplePagerNav {
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+/* line 13, ../sass/quickpager.sass */
+.simplePagerNav li {
+  display: inline-block;
+  margin: 0 1% 1%;
+}
+/* line 16, ../sass/quickpager.sass */
+.simplePagerNav a {
+  background: #080031;
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  font-family: sans-serif;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 36px;
+  border: 3px solid #080031;
+}
+/* line 27, ../sass/quickpager.sass */
+.simplePagerNav a:hover {
+  border: 3px solid #837bac;
+}
+/* line 30, ../sass/quickpager.sass */
+.simplePagerNav .currentPage a {
+  border: 3px solid #837bac;
+}
+
+/* line 32, ../sass/quickpager.sass */
+.prev, .next {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  border-radius: 100%;
+  opacity: 0.5;
+  cursor: pointer;
+  display: none;
+}
+/* line 42, ../sass/quickpager.sass */
+.prev:hover, .next:hover {
+  opacity: 1;
+}
+
+/* line 44, ../sass/quickpager.sass */
+.prev {
+  background: #080031 url(../images/left_btn.png) center no-repeat;
+  left: 0;
+}
+
+/* line 47, ../sass/quickpager.sass */
+.next {
+  background: #080031 url(../images/right_btn.png) center no-repeat;
+  right: 0;
+}

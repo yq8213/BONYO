@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>首頁</title>
+    <meta name="keywords" content="首頁">
+    <meta name="description" content="首頁">
+    <meta name="author" content="" />
+    <meta name="copyright" content="" />
+  	<link href="css/css.css" rel="stylesheet" type="text/css" />
+		<link href="css/menu.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="jquery/1.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.carouFredSel-5.5.0-packed.js"></script>
+		<script type="text/javascript" src="js/pic_bd.js"></script> 
+		<script type="text/javascript" src="js/menu_hover.js"></script>
+
+  </head>
+<body>
+ <!--頁頭開始-->
+<div id="header">
+	<ul>
+  	<li><a href="contact.html">CONTACT US</a></li>
+  	<li><a href="sitemap.html">SITE MAP</a></li>
+  	<li><a href="index.html">HOME</a></li>
+  </ul>
+</div>
+ <!--頁頭結束-->
+ <!--頁腳開始-->
+<div id="footer">
+ 	<dt class="logo"><img src="images/logo.gif" /></dt>
+  <dt>高雄市鼓山區裕誠路1789號<br />Tel / 07-5523322  Fax / 07-5548699</dt>
+  <dd>Copyright © 2013 易訂通科技有限公司 All Rights Reserved.</dd>
+</div>
+ <!--頁腳結束-->
+ <!--主選單開始-->
+<script type="text/javascript">
+    $(document).ready(function(){
+      if($(window).height()<578){
+      imgnowww=405/(578/($(window).height()));
+      }
+  
+      $("#menu_close").css("padding-top",($(window).height()-300)/2);
+  
+    //MENU
+    $("#div_menu").css("height",$(window).height());
+      $("#div_menu_2").css("height",$(window).height());
+          $("#div_menu").animate({"width": 7},500);
+  
+      $("#menu_btn").animate({"width": 90},500);
+    $("#menu_btn").click(function(){
+          $(".menu_open").css("padding-top",($(window).height())/10);
+      $("#menu_btn").animate({"width": 0},500);
+          $("#div_menu").animate({"width": 283},500);
+          $("#div_menu_2").animate({"margin-left": "0px"},500,function(){
+        $("#menu_close").animate({"width":88},500);
+      });
+      });
+  
+    $("#menu_close").click(function(){
+          $("#div_menu").animate({"width": 7},500);
+      $("#menu_close").css({"width":0});
+          $("#div_menu_2").animate({"margin-left": "0px"},500,function(){
+        $("#menu_btn").animate({"width": 90},500);
+  
+      });
+      });
+    
+      $(window).bind("resize", function() {
+      $("#div_menu").css("height",$(window).height());
+      $("#div_menu_2").css("height",$(window).height());
+  
+  
+      $(".menu_open").css("padding-top",($(window).height())/10);
+      $("#menu_close").css("padding-top",($(window).height()-300)/2);
+      });
+    });
+  </script>
+  <div class="menu">
+    <span id="menu_btn">
+    <div class="_menu_hover">
+    <img src="images/menubt_off.png" width="90" height="147" border="0"   />
+    <img src="images/menubt_on.png" width="90" height="147" border="0"   />
+    </div>
+    </span>
+  </div>
+<div id="menu_close">
+    <div class="_menu_hover">
+    <img src="images/menuclose_off.png" width="88" height="147" border="0" />
+    <img src="images/menuclose_on.png" width="88" height="147" border="0" />
+    </div>
+  </div>
+<div id="div_menu">
+    <div id="div_menu_2">
+            <div class="menu_open">
+               <ul>
+                <li>
+                <div class="_menu_hover">
+                <a href="about.html"><img src="images/bt01_off.png" width="251" height="84" border="0" /></a>
+                <img src="images/bt01_on.png" width="251" height="84" border="0" />
+                </div>
+                </li>
+                <li>
+                <div class="_menu_hover">
+                <a href="rooms.html"><img src="images/bt02_off.png" width="251" height="84" border="0" /></a>
+                <img src="images/bt02_on.png" width="251" height="84" border="0" />
+                </div>
+                </li>
+                <li>
+                <div class="_menu_hover">
+                <a href="news.html"><img src="images/bt03_off.png" width="251" height="84" border="0" /></a>
+                <img src="images/bt03_on.png" width="251" height="84" border="0" />
+                </div>
+                </li>
+                <li>
+                <div class="_menu_hover">
+                <a href="Preferential.html"><img src="images/bt04_off.png" width="251" height="84" border="0" /></a>
+                <img src="images/bt04_on.png" width="251" height="84" border="0" />
+                </div>
+                </li>
+                <li>
+                <div class="_menu_hover">
+                <a href="contact.html"><img src="images/bt05_off.png" width="251" height="84" border="0" /></a>
+                <img src="images/bt05_on.png" width="251" height="84" border="0" />
+                </div>
+                </li>
+                <li>
+                <div class="_menu_hover">
+                <a href="#"><img src="images/bt06_off.png" width="251" height="84" border="0" /></a>
+                <img src="images/bt06_on.png" width="251" height="84" border="0" />
+                </div>
+                </li>
+               </ul>
+            </div>
+    </div>
+  </div>
+ <!--主選單結束-->
+ <!--內容開始-->
+<div id="index_news">
+	<h1>最新消息</h1>
+	<dl>
+  	<dt><a href="news_show.html"><img src="images/pic01_indexNews.jpg"/></a></dt>
+    <dd><a href="news_show.html">感謝台灣旅遊家雜誌專訪，並獲網友評為年度最佳旅館...</a></dd>
+    <dd class="more">詳全文<div class="_menu_hover news_bt"><a href="news_show.html"><img src="images/icon_drow_off.png"/></a><img src="images/icon_drow_on.png"/></div></dd>
+    <hr />
+  </dl>
+  <dl>
+  	<dt><a href="news_show.html"><img src="images/pic02_indexNews.jpg"/></a></dt>
+    <dd><a href="news_show.html">感謝台灣旅遊家雜誌專訪，並獲網友評為年度最佳旅館...</a></dd>
+    <dd class="more">詳全文<div class="_menu_hover news_bt"><a href="news_show.html"><img src="images/icon_drow_off.png"/></a><img src="images/icon_drow_on.png"/></div></dd>
+    <hr />
+  </dl>
+  <dl>
+  	<dt><a href="news_show.html"><img src="images/pic03_indexNews.jpg"/></a></dt>
+    <dd><a href="news_show.html">感謝台灣旅遊家雜誌專訪，並獲網友評為年度最佳旅館...</a></dd>
+    <dd class="more">詳全文<div class="_menu_hover news_bt"><a href="news_show.html"><img src="images/icon_drow_off.png"/></a><img src="images/icon_drow_on.png"/></div></dd>
+    <hr />
+  </dl>
+</div>
+<div id="index_sale">
+	<dl>
+  	<dt><a href="#"><img src="images/pic01_indexSale.jpg"/></a></dt>
+    <dd class="sale_tit">優惠專案</dd>
+    <dd><a href="#">即日起至易訂通線上訂房，即可享有全系列房型8折優惠.....&lt;詳全文&gt;</a></dd>
+    <dd class="more">看更多優惠<div class="_menu_hover news_bt"><a href="#"><img src="images/icon_drow_sale.png"/></a><img src="images/icon_drow_on.png"/></div></dd>
+    <hr />
+  </dl>
+</div>          
+ <!--內容結束-->
+ <!--背景圖片輪播開始-->
+  <div id="all_bd" >
+    <div class="_imgs">
+      <img src="images/index_bd01.jpg" style="display:none;">
+    </div>
+    <div class="_imgs">
+      <img src="images/index_bd02.jpg" style="display:none;">
+    </div>
+  </div>
+  <!--背景圖片輪播結束-->
+</body>
+</html>

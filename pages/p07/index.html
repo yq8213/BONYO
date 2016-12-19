@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>線上訂房系統</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<link href="css/banner_set.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// 大廣告圖片的高度及動畫時間
+		var adHeight = 340,
+			animateSpeed = 400;
+		$('#adblock ul.link li a').each(function(i){
+			// 把選單排好位置
+			$(this).css('top', i * 64);
+		}).mouseover(function(){
+			var $this = $(this),
+				// 找出目前 li 是在選單中的第幾個(jQuery 1.4)
+				no = $this.parent().index();
+			
+			// 先移除有 .selected 的超連結的樣式
+			$('#adblock ul.link li a.selected').removeClass('selected');
+			// 再把目前點擊到的超連結加上 .selected
+			$this.addClass('selected');
+			
+			// 把 ul.showbox 的 top 移到相對應的高度
+			$('#adblock ul.showbox').stop().animate({
+				top: adHeight * no * -1
+			}, animateSpeed);
+		}).focus(function(){
+			$(this).blur();
+		}).eq(0).mouseover();
+	});
+</script>
+</head>
+
+<body>
+<div class="top_icon"><img src="images/icon_orders.png"/> 訂單查詢  <img src="images/icon_password.png"/> 忘記密碼</div>
+<div id="header">
+	<ul>
+  	<li><img src="images/step1_on.jpg"/></li>
+    <li><img src="images/step2.jpg"/></li>
+    <li><img src="images/step3.jpg"/></li>
+    <li><img src="images/step4.jpg"/></li>
+    <li><img src="images/step5.jpg"/></li>
+    <li><img src="images/step6.jpg"/></li>
+  </ul>
+</div>
+<div id="content" class="mTop_0">
+<!--banner開始-->
+<div class="banner_bg">
+  <div id="adblock">
+      <ul class="showbox">
+        <li><a href="#"><img src="images/a.jpg" title="套裝行程" /></a></li>
+        <li><a href="#"><img src="images/b.jpg" title="套裝行程名稱" /></a></li>
+      </ul>
+      <ul class="link">
+        <li><a href="#"><b>義大世界兩天一夜雙人遊</b><span>精緻套房</span></a></li>
+        <li><a href="#"><b>義大世界兩天一夜雙人遊</b><span>精緻套房</span></a></li>
+      </ul>
+    </div>
+</div>
+<!--banner結束-->
+  <div id="calendar">
+  <dl>
+  	<dt><input type="image" src="images/bt_left.gif" style="float:left"/><span>2013</span><span>11</span><input type="image" src="images/bt_right.gif" style="float:right"/></dt>
+    <dd>
+    	<table cellpadding="0" cellspacing="0">
+      	<tr>
+        	<td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>1<br />1350元</td>
+          <td>2<br />1350元</td>
+          <td><span>3</span><br />1350元</td>
+        </tr>
+        <tr>
+        	<td><span>4</span><br />1350元</td>
+          <td>5<br />1350元</td>
+          <td>6<br />1350元</td>
+          <td>7<br />1350元</td>
+          <td>8<br />1350元</td>
+          <td>9<br />1350元</td>
+          <td><span>10</span><br />1350元</td>
+        </tr>
+        <tr>
+        	<td><span>11</span><br />1350元</td>
+          <td>12<br />1350元</td>
+          <td>13<br />1350元</td>
+          <td>14<br />1350元</td>
+          <td>15<br />1350元</td>
+          <td>16<br />1350元</td>
+          <td><span>17</span><div class="center">滿</div></td>
+        </tr>
+        <tr>
+        	<td><span>18</span><br />1350元</td>
+          <td>19<br />1350元</td>
+          <td>20<br />1350元</td>
+          <td>21<div class="center">滿</div></td>
+          <td>22<div class="center">滿</div></td>
+          <td>23<div class="center">滿</div></td>
+          <td><span>24</span><br />1350元</td>
+        </tr>
+        <tr>
+        	<td><span>25</span><br />1350元</td>
+          <td>26<br />1350元</td>
+          <td>27<br />1350元</td>
+          <td>28<br />1350元</td>
+          <td>29<br />1350元</td>
+          <td>30<br />1350元</td>
+          <th>1<br />尚未開放</th>
+        </tr>
+      </table>
+    </dd>
+  </dl>
+  </div>
+  <div id="roomSelect">
+	<h2>訂房資訊</h2>
+  <table cellpadding="0" cellspacing="0">
+  	<tr>
+    	<th>類型 <img src="images/icon_arrow.gif" /></th>
+    	<td><input type="radio" /> 一般訂房 <input type="radio" checked="checked" /> 套裝行程</td>
+    </tr>
+    <tr>
+    	<th>套裝名稱 <img src="images/icon_arrow.gif" /></th>
+    	<td><select><option>義大世界兩天一夜雙人遊</option></select></td>
+    </tr>
+    <tr>
+    	<th>房型名稱 <img src="images/icon_arrow.gif" /></th>
+    	<td>精緻雙人房</td>
+    </tr>
+    <tr>
+    	<th>入住日期 <img src="images/icon_arrow.gif" /></th>
+    	<td>2013年1月13日 <select><option>15:00</option></select> 入房</td>
+    </tr>
+    <tr>
+    	<th>房間數 <img src="images/icon_arrow.gif" /></th>
+    	<td><select><option>2</option></select> 間</td>
+    </tr>
+    <tr>
+    	<th>優惠價格 <img src="images/icon_arrow.gif" /></th>
+    	<td>1350元</td>
+    </tr>
+    <tr>
+    	<th colspan="2">行程說明 <input type="image" src="images/bt_open.gif" style="vertical-align:middle" /></th>
+    </tr>
+    <!--行程說明展開
+    <tr>
+    	<th colspan="2">行程說明 <input type="image" src="images/bt_close.gif" style="vertical-align:middle" /></th>
+    </tr>
+    <tr>
+    	<td colspan="2" class="setnote">
+      ※入住時間下午16點過後.退房時間隔天中午12點前<br />
+      ※限住2人.(小孩同行.身高超過120公分.酌收人頭費用500元.限加1人.本館一
+          律不提供加床服務)<br />
+      ※附贈中西式自助早餐2客<br />
+      ※愛河愛之船票券2張<br />
+      ※夢時代摩天輪票券2張<br />
+      ※禁止寵物進入.如攜帶寵物.櫃檯人員有權拒收<br />
+      </td>
+    </tr>
+    -->
+  </table>
+  <a href="#" class="addin"></a>
+  </div>
+  <hr />
+</div>
+<div id="footer">
+Copyright © 2012 <a href="http://www.ezcheckin.com.tw/" target="_blank">易訂通科技有限公司</a> All Rights Reserved.
+  <div class="foot_icon">
+    <div id="twcaseal" class="MINI"><img src='images/MINI.GIF'/></div> 
+    <script type="text/javascript" charset="utf-8" >var twca_cn=“貴單位申請之憑證網
+    站名稱(Common Name)”;</script> 
+    <script type="text/javascript" src="//ssllogo.twca.com.tw/twcaseal_v3.js" 
+    charset="utf-8"></script>
+    <p> 
+    <img src="images/icon_3dcard1.gif" width="70" height="69" alt="MasterCard卡3D驗證" />
+    <img src="images/icon_3dcard2.gif" width="70" height="69" alt="VISA卡3D驗證" />
+    <img src="images/icon_taiwan.gif" width="105" height="69" alt="國民旅遊卡" />
+    </p>
+  </div>
+</div>
+</body>
+</html>

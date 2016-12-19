@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*-----選單----*/
+.menu {
+	position:absolute;
+	_position: absolute; /* position fixed for IE6 */
+  _top:expression(documentElement.scrollTop+(documentElement.clientHeight-this.clientHeight)/2);
+	_margin-top:0;
+	z-index:9999;
+	top: 45%;
+	margin-top: -100px;
+	left: 0px;
+	height: 100%;
+	width:15px;
+}
+.menu_open {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+}
+.menu_open ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.menu_open ul li {
+	padding-bottom: 5px;
+	display: block;
+	height: 84px;
+	width: 251px;
+	z-index:999;
+}
+#menu_btn{
+	cursor:pointer; display:block; width:0px; overflow:hidden;
+}
+
+#menu_btn div._menu_hover{
+	cursor:pointer;
+	width:90px;
+	height:147px;
+	float:left;
+}
+#menu_close{
+	cursor:pointer; 
+	position:absolute; 
+	display:block; 
+	overflow:hidden; 
+	float:left;
+	width:0;
+	z-index:99999;
+	margin-left:195px
+}
+#menu_close div._menu_hover{
+	cursor:pointer;
+	width:88px;
+	height:147px;
+	float:left;
+}
+#div_menu{
+	position:absolute;
+	width: 0px;
+	margin-top:0px;
+	margin-left:0px;
+	overflow:hidden;
+	z-index:9999;
+	background:url(../images/bd.png) repeat-y;
+}
+
+#div_menu_2 div.menu_open div._menu_hover{
+	cursor:pointer;
+	width:251px;
+	height:84px;
+	float:left;
+}
+

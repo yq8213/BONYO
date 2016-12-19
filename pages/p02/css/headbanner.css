@@ -1,0 +1,44 @@
+	a img {
+		border: none;
+		vertical-align: middle;
+	}
+	#adblock {
+		overflow: hidden;
+		width: 955px;
+		height: 321px;
+		position: relative;
+		margin:0 auto 30px;
+	}
+	#adblock ul, #adblock li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	#adblock ul.showbox, #adblock ul.link {
+		position: absolute;
+	}
+	#adblock ul.showbox li a {
+		display: block;
+		height: 321px;
+	}
+	#adblock ul.link {
+		right: 0;
+		top:30px;
+	}
+	#adblock ul.link li a {
+		display: block;
+		width: 331px;
+		height: 98px;
+		position: absolute;
+		background-color: #ccc;
+		right: 0px;
+	}
+	#adblock ul.link li a.selected {
+		width: 331px;
+	}
+	.linktit
+	{
+	    width:331px;
+	    float:right;
+	}

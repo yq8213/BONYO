@@ -1,0 +1,469 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>客房介紹</title>
+    <meta name="keywords" content="客房介紹">
+    <meta name="description" content="客房介紹">
+    <meta name="author" content="" />
+    <meta name="copyright" content="" />
+  	<link href="css/css.css" rel="stylesheet" type="text/css" />
+		<link href="css/menu.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="jquery/1.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.carouFredSel-5.5.0-packed.js"></script>
+		<script type="text/javascript" src="js/menu_hover.js"></script>
+    <link href="css/roomlist.css" rel="stylesheet" type="text/css" />
+    
+<!--但入-->
+<script type="text/javascript">
+  $(document).ready(function(){
+  	/*載入Banner*/
+	$("#logo").fadeIn(1500);
+  });
+</script>
+<!--/移過去/-->
+<script>
+$(document).ready(function(){
+  $("._item_2").css({"opacity":1});
+  $("._item_border_mask_2").css({"opacity":0,"display":"inline"});
+  $("._item_2").hover(
+  	function(){
+  		$(this).find("._item_border_mask_2").stop().animate({opacity: "1"},400);
+      $(this).css({"opacity":1});
+  	},
+  	function(){
+  		$(this).find("._item_border_mask_2").stop().animate({opacity: "0"},400);
+      $(this).css({"opacity":1});
+  });
+});
+</script>
+<!--//-->
+    <script type="text/javascript" src="js/jquery.tinyscrollbar.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        		  });
+    </script>
+
+  </head>
+    <script type="text/javascript">
+      var timer_resize;
+      $(document).ready(function(){
+		re_bulid();
+
+		//鍵盤控制
+document.onkeydown=function(e){
+  e=window.event||e;
+          var _is_event = false;
+          var v=0;
+  switch(e.keyCode){
+            case 37:
+			  _is_event = true;
+              v = -1;
+              break;
+            case 39:
+              _is_event = true;
+              v = 1;
+              break;
+  }
+          if (_is_event){
+	      	  var speed = 10 * v;
+	      	  var nowtop = parseInt($('#about_scroll .overview').css('left'),10);
+            if (nowtop<0) nowtop = 0-nowtop;
+            var _fheight = $('#about_scroll .viewport').width();
+            var totalheight = $('#about_scroll .overview').outerWidth(true) - _fheight;
+	      	  var scrolly =  nowtop + speed;
+            if (scrolly >totalheight) scrolly = totalheight;
+	      	  $('#about_scroll').tinyscrollbar_update(scrolly);
+	      	  return false;
+          }
+
+}
+		 //
+
+        $(window).bind("resize", function() {
+          if (timer_resize!=null){
+            clearTimeout(timer_resize);
+          }
+          timer_resize = setTimeout(function(){
+            re_bulid();
+          },500);
+        });
+      });
+      function re_bulid(){
+        //根據視窗調整內容高度、寬度，如果寬高固定，則不用去算
+
+
+        var win_w = $(window).width();
+        var win_h = $(window).height();
+		
+		if(win_h<480){
+          var now_h = win_h;
+		  var now_w = 506/(389/(now_h));
+  
+          $("#roomul").css("width",now_w*5);
+		  $('#about_content').css({'height':now_h+'px','width':win_w+'px'});
+          $('.resizewidth').css({'width':win_w+'px'});
+		  $('.scrollbar').css('top',win_h);
+		  
+		  $(".listimg").css({"height":now_h+"px","width":now_w});
+		  $("._item_2").css({"width":now_w,"height":now_h});
+		  $("._item_border_mask_2").css({"width":now_w,"bottom":"12px"});
+		  $(".itemtable").css({"width":now_w});
+		  $(".banner_room").css({"height":$(window).height(),"padding-top":($(window).height())/2});
+
+
+		}else{
+          $("#roomul").css("width",506*5);
+		  $(".banner_room").css({"height":$(window).height(),"padding-top":($(window).height())/2});
+
+        $('#about_content').css({'height':400+'px','width':win_w+'px'});
+        $('.resizewidth').css({'width':win_w+'px'});
+		  $('.scrollbar').css({'top':'389px'});
+
+
+		  $(".listimg").css({"height":"389px","width":"506px"});
+		  $("._item_2").css({"width":"506px","height":"389px"});
+		  $("._item_border_mask_2").css({"width":"466px","bottom":"0px"});
+		  $(".itemtable").css({"width":"466px"});
+
+		}
+
+
+
+        //出現卷軸, {size:是指定捲軸高度，如果跟內容一樣高，就不需要這個參數}
+        $("#about_scroll").tinyscrollbar({ axis:'x'});
+		
+
+        //捲軸滑過去跑出來,如果不需要，以下這段都不用
+        var about_scroll = $("#about_scroll").find('.scrollbar');
+        about_scroll.animate({'height':'12px'}, 500);
+        about_scroll.find('.thumb').animate({'height':'12px'}, 500);
+        $("#about_scroll").hover(function(e){
+          about_scroll.animate({'height':'12px'}, 500);
+          about_scroll.find('.thumb').animate({'height':'12px'}, 500);
+        },function(e){
+          about_scroll.animate({'height':'12px'}, 500);
+          about_scroll.find('.thumb').animate({'height':'12px'}, 500);
+        });
+        //END
+      }
+    </script>
+<body>
+	 
+<!--頁頭開始-->
+<div id="header">
+	<ul>
+  	<li><a href="contact.html">CONTACT US</a></li>
+  	<li><a href="sitemap.html">SITE MAP</a></li>
+  	<li><a href="index.html">HOME</a></li>
+  </ul>
+</div>
+ <!--頁頭結束-->
+ <!--頁腳開始-->
+<div id="footer">
+ 	<dt class="logo"><img src="images/logo.gif" /></dt>
+  <dt>高雄市鼓山區裕誠路1789號<br />Tel / 07-5523322  Fax / 07-5548699</dt>
+  <dd>Copyright © 2013 易訂通科技有限公司 All Rights Reserved.</dd>
+</div>
+ <!--頁腳結束-->
+ <!--主選單開始-->
+<script type="text/javascript">
+    $(document).ready(function(){
+      if($(window).height()<578){
+      imgnowww=405/(578/($(window).height()));
+      }
+  
+      $("#menu_close").css("padding-top",($(window).height()-300)/2);
+  
+    //MENU
+    $("#div_menu").css("height",$(window).height());
+      $("#div_menu_2").css("height",$(window).height());
+          $("#div_menu").animate({"width": 7},500);
+  
+      $("#menu_btn").animate({"width": 90},500);
+    $("#menu_btn").click(function(){
+          $(".menu_open").css("padding-top",($(window).height())/10);
+      $("#menu_btn").animate({"width": 0},500);
+          $("#div_menu").animate({"width": 283},500);
+          $("#div_menu_2").animate({"margin-left": "0px"},500,function(){
+        $("#menu_close").animate({"width":88},500);
+      });
+      });
+  
+    $("#menu_close").click(function(){
+          $("#div_menu").animate({"width": 7},500);
+      $("#menu_close").css({"width":0});
+          $("#div_menu_2").animate({"margin-left": "0px"},500,function(){
+        $("#menu_btn").animate({"width": 90},500);
+  
+      });
+      });
+    
+      $(window).bind("resize", function() {
+      $("#div_menu").css("height",$(window).height());
+      $("#div_menu_2").css("height",$(window).height());
+  
+  
+      $(".menu_open").css("padding-top",($(window).height())/10);
+      $("#menu_close").css("padding-top",($(window).height()-300)/2);
+      });
+    });
+  </script>
+  <div class="menu">
+    <span id="menu_btn">
+    <div class="_menu_hover">
+    <img src="images/menubt_off.png" width="90" height="147" border="0"   />
+    <img src="images/menubt_on.png" width="90" height="147" border="0"   />
+    </div>
+    </span>
+  </div>
+<div id="menu_close">
+    <div class="_menu_hover"><img src="images/menuclose_on.png" width="88" height="147" border="0" />
+    </div>
+  </div>
+<div id="div_menu">
+    <div id="div_menu_2">
+            <div class="menu_open">
+               <ul>
+                <li>
+                <div class="_menu_hover">
+                <a href="about.html"><img src="images/bt01_off.png" width="251" height="84" border="0" /></a>
+                <img src="images/bt01_on.png" width="251" height="84" border="0" />
+                </div>
+                </li>
+                <li>
+                <div class="_menu_hover">
+                <a href="rooms.html"><img src="images/bt02_off.png" width="251" height="84" border="0" /></a>
+                <img src="images/bt02_on.png" width="251" height="84" border="0" />
+                </div>
+                </li>
+                <li>
+                <div class="_menu_hover">
+                <a href="news.html"><img src="images/bt03_off.png" width="251" height="84" border="0" /></a>
+                <img src="images/bt03_on.png" width="251" height="84" border="0" />
+                </div>
+                </li>
+                <li>
+                <div class="_menu_hover">
+                <a href="Preferential.html"><img src="images/bt04_off.png" width="251" height="84" border="0" /></a>
+                <img src="images/bt04_on.png" width="251" height="84" border="0" />
+                </div>
+                </li>
+                <li>
+                <div class="_menu_hover">
+                <a href="contact.html"><img src="images/bt05_off.png" width="251" height="84" border="0" /></a>
+                <img src="images/bt05_on.png" width="251" height="84" border="0" />
+                </div>
+                </li>
+                <li>
+                <div class="_menu_hover">
+                <a href="#"><img src="images/bt06_off.png" width="251" height="84" border="0" /></a>
+                <img src="images/bt06_on.png" width="251" height="84" border="0" />
+                </div>
+                </li>
+               </ul>
+            </div>
+    </div>
+  </div>
+ <!--主選單結束-->
+ <!--內容開始-->
+ <div class="roomlist_bd">
+ <div id="about_content">
+ 			<div class="arrow">
+      <a class="arrow-left"></a>
+      <a class="arrow-right"></a>
+  </div>
+      <div id="about_scroll" style="width:100%;height:100%;">
+        <div style="position: relative;">
+          <div class="scrollbar" style=" visibility:hidden">
+          <div class="track">
+          <div class="thumb"></div>
+          </div>
+          </div>
+	        <div class="viewport resizewidth">
+	          <div class="overview">
+             <div id="roomul">
+               
+                       <div class="_item_2">
+                      <div class="_content" style="text-align:center; cursor:pointer" onClick="window.location.href='roomshow.html'"><img  alt='風呂套房' class='listimg'   data-ow="506" data-oh="389" src="images/roomlist01.jpg"  style='top:0px;left:0px;width:506px;height:389px;'  border='0'/></div>
+                      <!--邊框遮罩-->
+                      <div class="_item_border_mask_2" onClick="window.location.href='roomshow.html'">&nbsp;
+                        <table class="itemtable" width="466" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td valign="top"><table border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td class="room_t">風呂套房  </td>
+                              </tr>
+                              <tr>
+                               <td height="10"></td>
+                              </tr>
+                              <tr>
+                                <td class="room_t2">住宿 NT$ 7200 | 休息 NT$ 1200</td>
+                              </tr>
+                            </table></td>
+                            <td width="12">&nbsp;</td>
+                            <td width="23" align="right"><img src="images/rooms_btn.png" width="23" height="46" /></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                       <div class="_item_2">
+                      <div class="_content" style="text-align:center; cursor:pointer" onClick="window.location.href='roomshow.html'"><img  alt='豪華套房' class='listimg'   data-ow="506" data-oh="389" src="images/roomlist02.jpg"  style='top:0px;left:0px;width:506px;height:389px;'  border='0'/></div>
+                      <!--邊框遮罩-->
+                      <div class="_item_border_mask_2" onClick="window.location.href='roomshow.html'">&nbsp;
+                        <table class="itemtable" width="466" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td valign="top"><table border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td class="room_t">豪華套房  </td>
+                              </tr>
+                              <tr>
+                               <td height="10"></td>
+                              </tr>
+                              <tr>
+                                <td class="room_t2">住宿 NT$ 6000 | 休息 NT$ 1000</td>
+                              </tr>
+                            </table></td>
+                            <td width="12">&nbsp;</td>
+                            <td width="23" align="right"><img src="images/rooms_btn.png" width="23" height="46" /></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                       <div class="_item_2">
+                      <div class="_content" style="text-align:center; cursor:pointer" onClick="window.location.href='roomshow.html'"><img  alt='商務套房' class='listimg'   data-ow="506" data-oh="389" src="images/roomlist03.jpg"  style='top:0px;left:0px;width:506px;height:389px;'  border='0'/></div>
+                      <!--邊框遮罩-->
+                      <div class="_item_border_mask_2" onClick="window.location.href='roomshow.html'">&nbsp;
+                        <table class="itemtable" width="466" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td valign="top"><table border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td class="room_t">商務套房  </td>
+                              </tr>
+                              <tr>
+                               <td height="10"></td>
+                              </tr>
+                              <tr>
+                                <td class="room_t2">住宿 NT$ 4000 | 休息 NT$ 800</td>
+                              </tr>
+                            </table></td>
+                            <td width="12">&nbsp;</td>
+                            <td width="23" align="right"><img src="http://www.elpuerto.com.tw/images/rooms_btn.png" width="23" height="46" /></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                       <div class="_item_2">
+                      <div class="_content" style="text-align:center; cursor:pointer" onClick="window.location.href='roomshow.html'"><img  alt='精緻套房' class='listimg'   data-ow="506" data-oh="389" src="images/roomlist04.jpg"  style='top:0px;left:0px;width:506px;height:389px;'  border='0'/></div>
+                      <!--邊框遮罩-->
+                      <div class="_item_border_mask_2" onClick="window.location.href='roomshow.html'">&nbsp;
+                        <table class="itemtable" width="466" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td valign="top"><table border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td class="room_t">精緻套房  </td>
+                              </tr>
+                              <tr>
+                               <td height="10"></td>
+                              </tr>
+                              <tr>
+                                <td class="room_t2">住宿 NT$ 4800 | 休息 NT$ 800</td>
+                              </tr>
+                            </table></td>
+                            <td width="12">&nbsp;</td>
+                            <td width="23" align="right"><img src="http://www.elpuerto.com.tw/images/rooms_btn.png" width="23" height="46" /></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                       <div class="_item_2">
+                      <div class="_content" style="text-align:center; cursor:pointer" onClick="window.location.href='roomshow.html'"><img  alt='四季VIP套房' class='listimg'   data-ow="506" data-oh="389" src="images/roomlist05.jpg"  style='top:0px;left:0px;width:506px;height:389px;'  border='0'/></div>
+                      <!--邊框遮罩-->
+                      <div class="_item_border_mask_2" onClick="window.location.href='roomshow.html'">&nbsp;
+                        <table class="itemtable" width="466" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td valign="top"><table border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td class="room_t">四季VIP套房  </td>
+                              </tr>
+                              <tr>
+                               <td height="10"></td>
+                              </tr>
+                              <tr>
+                                <td class="room_t2">住宿 NT$ 11600 | 休息 NT$ 2000</td>
+                              </tr>
+                            </table></td>
+                            <td width="12">&nbsp;</td>
+                            <td width="23" align="right"><img src="http://www.elpuerto.com.tw/images/rooms_btn.png" width="23" height="46" /></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                            
+              </div>
+ 						</div>
+ 					</div>
+        </div>
+      </div>
+ </div>
+ </div>
+ <!--內容結束-->
+ <!--背景圖片輪播開始-->
+	<script type="text/javascript" src="js/pic_bd.js"></script> 
+  <div id="all_bd" >
+    <div class="_imgs"><img src="images/rooms_bd01.jpg" style="display:none;"></div>
+    <div class="_imgs"><img src="images/rooms_bd02.jpg" style="display:none;"></div>
+    <div class="_imgs"><img src="images/rooms_bd03.jpg" style="display:none;"></div>
+    <div class="_imgs"><img src="images/rooms_bd04.jpg" style="display:none;"></div>
+    <div class="_imgs"><img src="images/rooms_bd05.jpg" style="display:none;"></div>
+    <div class="_imgs"><img src="images/rooms_bd06.jpg" style="display:none;"></div>
+    <div class="_imgs"><img src="images/rooms_bd07.jpg" style="display:none;"></div>
+    <div class="_imgs"><img src="images/rooms_bd08.jpg" style="display:none;"></div>
+  </div>
+  
+
+<!--背景圖片輪播結束-->
+<script type="text/javascript">
+(function($){
+	//更改此處數字可變更移動速度，數字愈大愈慢
+  var defaultSpeed = 3000;
+  
+	$('.arrow-left').bind('mouseenter mouseleave', function(event) {
+    var scrollLength = $('#roomul').width() - $('.scrollbar').width();
+    var oLeft = $('.overview').css('left').split('px')[0]*(-1);
+    var duration = oLeft/scrollLength*defaultSpeed;
+    if(event.type === 'mouseenter') {
+      $('.overview', '#about_scroll').stop(true, false).animate(
+        { left: 0 },
+        {
+          duration: duration, 
+          step: function(now) {
+          $('#about_scroll').tinyscrollbar_update(now*(-1));
+        }
+      });
+    } else {
+      $('.overview', '#about_scroll').stop(true, false);
+    }
+  });
+  $('.arrow-right').bind('mouseenter mouseleave', function(event) {
+    var scrollLength = $('#roomul').width() - $('.scrollbar').width();
+    var oLeft = $('.overview').css('left').split('px')[0]*(-1);
+    var duration = (scrollLength-oLeft)/scrollLength*defaultSpeed;
+    if(event.type === 'mouseenter') {
+      $('.overview', '#about_scroll').stop(true, false).animate(
+        { left: (-1)*scrollLength },
+        {
+          duration: duration, 
+          step: function(now) {
+          $('#about_scroll').tinyscrollbar_update(now*(-1));
+        }
+      });
+    } else {
+      $('.overview', '#about_scroll').stop(true, false);
+    }
+  });
+}(jQuery));
+</script> 
+</body>
+</html>

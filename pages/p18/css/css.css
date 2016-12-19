@@ -1,0 +1,225 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*合作提案*/
+.contact li{
+	border-bottom:1px dotted #9a9a9a;
+	padding:10px 0;
+	list-style:none;
+}
+.contact ul{
+	width:380px;
+}
+.contact input,.contact textarea,.contact select{
+	border:0;
+	height:22px;
+	filter:alpha(opacity=50);opacity:0.5;zoom:1;/* old IE */
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50,FinishOpacity=15, Style=0, StartX=0, FinishX=100, StartY=0,FinishY=16); /*supported by current IE*/
+	-moz-opacity:0.5;          /* Moz + FF */
+	opacity:0.5;               /* 支持新版瀏覽器 */
+}
+.mail_submit a{
+	float:right;
+	margin-top:10px;
+	display:block;
+	width:100px;
+	height:23px;
+	background:#454545;
+	text-align:center;
+	padding-top:7px;
+}
+.mail_submit a:hover{
+	background:#000;
+}
+
+.proposal_tit{
+	position:absolute;
+	z-index:888;
+	font-size:15px;
+	color:#fff;
+	left:33%;
+	top:20%
+}
+.proposal_tit p{
+	font-size:30px;
+	font-family:"Arial Unicode MS";
+	margin-left:-5px;
+}
+
+/*聯絡我們*/
+
+.contact p{
+	color:#4a4a4a;
+	line-height:30px;
+}
+
+/*關於我們*/
+
+#loading {
+	position: absolute;
+  top: 49.5%; 
+	left: 49.5%;
+	z-index: 3;
+	width: 24px; 
+	height: 24px;
+	text-indent: -999em;
+	background-image: url(images/progress.gif);
+}
+#supersize{
+	position:fixed;
+}
+#supersize img, #supersize a{
+	height:100%;
+	width:100%;
+	position:absolute;
+	z-index: 0;
+}
+#about_txt{
+	position:absolute;
+	z-index:888;
+	width:50%;
+	top:50%;
+	margin-top:-300px;
+	left:7%;
+	color:#302f2f;
+	line-height:20px;
+}
+#about_txt p{
+	line-height:30px;
+}
+.txt_ma{
+	margin-top:15px;
+}
+.about_tit{
+	position:absolute;
+	z-index:888;
+	font-size:24px;
+	color:#fff;
+	left:60%;
+	top:71%
+}
+.about_tit p{
+	font-size:30px;
+	font-family:"Arial Unicode MS";
+	margin-left:-5px;
+}
+
+
+/*服務項目*/
+#services_list{
+	position:absolute;
+	z-index:888;
+	width:880px;
+	height:440px;
+	top:50%;
+	left:50%;
+	margin-top:-220px;
+	margin-left:-440px;
+}
+#services_list dl{
+	position:relative;
+	width:194px;
+	padding-top:25px;
+	padding-left:25px;
+	height:195px;
+	float:right;
+}
+
+#services_list dd{
+	color:#323231;
+	width:170px;
+	line-height:18px;
+}
+#services_list p{
+	font-size:24px;
+	font-family:"Arial Unicode MS";
+	margin-bottom:10px;
+	margin-left:-2px;
+	line-height:25px;
+}
+#services_list dt{
+	width:217px;
+	height:217px;
+	position:absolute;
+	border-radius:5px;
+	top:0;
+	left:0;
+	z-index:-999;
+	background:#fff;
+	filter:alpha(opacity=30);opacity:0.3;zoom:1;/* old IE */
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=30,FinishOpacity=15, Style=0, StartX=0, FinishX=100, StartY=0,FinishY=16); /*supported by current IE*/
+	-moz-opacity:0.3;          /* Moz + FF */
+	opacity:0.3;               /* 支持新版瀏覽器 */
+}
+
+#services_list dl.services_tit p{
+	font-size:30px;
+}
+#services_list dl.services_tit dd{
+	color:#fff;
+	padding-top:130px;
+	font-size:15px;
+}
+
+#services_list dl.black dt{
+	background:#000;
+}
+#services_list dl.black dd{
+	color:#eeeeee
+}
+#services_list dl.more_op dt{
+	filter:alpha(opacity=20);opacity:0.2;zoom:1;/* old IE */
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=20,FinishOpacity=15, Style=0, StartX=0, FinishX=100, StartY=0,FinishY=16); /*supported by current IE*/
+	-moz-opacity:0.2;          /* Moz + FF */
+	opacity:0.2;               /* 支持新版瀏覽器 */
+}
+
+/*合作夥伴*/
+.pic_partner{
+	width:172px;
+	height:172px;
+	border:8px solid #efeeee;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-86px;
+	margin-top:-86px;
+}
+
+/*首頁*/
+#index_menu{
+	width:400px;
+	position:absolute;
+	top:0;
+	left:50%;
+	height:100%;
+	margin-left:-200px;
+	background:#302f2f;
+	z-index:9999;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#a2a1a1;
+}
+
+#index_menu li.logo{
+	width:286px;
+	position:relative;
+	top:20%;
+	left:50%;
+	margin-left:-143px;
+}
+#index_menu div{
+	width:80px;
+	height:25px;
+	margin-bottom:30px;
+	float:left;
+}
+#index_menu li{
+	float:left;
+	list-style-type:none;
+}
+#index_menu ul{
+	width:80px;
+	position:relative;
+	margin:0 auto;
+	top:20%;
+}

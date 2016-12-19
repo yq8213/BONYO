@@ -1,0 +1,49 @@
+﻿@charset "utf-8";
+
+/* ===================================================================
+CSS information
+
+ file name  : footer.css
+ style info : フッター用
+=================================================================== */
+
+#footer {
+	clear: both;
+	overflow: hidden;
+	display: block;
+	background-color: #2e2e2e;
+	margin-top:30px;
+}
+
+#footer #fFlash {
+	height: 60px;
+	width: 898px;
+	background: url(../img/common/footer_bg.gif) no-repeat 0 0;
+}
+
+#footer #globalNavi {
+	height: 28px;
+	width: 955px;
+	margin:20px auto;
+	padding-top: 10px;
+	text-align:left;
+}
+
+
+#globalNavi ul li {
+	float: left;
+	padding:0 15px;
+	font-size:15px;
+	color:#666666;
+	border-right:1px solid #666666;
+}
+
+#globalNavi ul li a{
+	color:#666666;
+}
+
+#footer #copyright 
+{
+    border-top:1px solid #666666;
+}
+

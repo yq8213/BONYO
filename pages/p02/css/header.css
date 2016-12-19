@@ -1,0 +1,67 @@
+﻿@charset "utf-8";
+
+/* ===================================================================
+CSS information
+
+ file name  : header.css
+ style info : ヘッダー用
+=================================================================== */
+hr
+{
+    clear:both;
+    visibility:hidden;
+}
+
+#scname
+{
+    float:left;
+    width:118px;
+    margin:2px 2px 2px 0 ;
+}
+#menubar
+{
+    width:955px;
+    margin:0 auto 35px;
+}
+#search
+{
+    width:288px;
+    height:42px;
+    float:left;
+    border:1px solid #dddddd;
+    background:#fff;
+}
+#search input
+{
+    width:252px;
+    height:36px;
+    margin:3px;
+    padding-left:30px;
+    background:#fbfbfb url(../images/search.jpg) no-repeat 10px 10px;
+    border:0px;
+}
+
+#header 
+{
+    background:#2e2e2e;
+    margin:0 auto;
+}
+#header ul
+{
+    width:955px;
+    margin:0 auto;
+}
+#header li
+{
+    float:left;
+    
+}
+#header li,#header li a
+{
+    color:#fff;
+    padding:10px 5px;
+}
+#header li a:hover
+{
+    border-top:3px solid #38c6d9;
+}

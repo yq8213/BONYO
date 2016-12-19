@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>林森會館-客房介紹</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<link href="css/banner.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	// 當網頁載完後執行(因為要抓圖片的寬高)
+	$(window).load(function(){
+		// 先取得相關區塊及圖片的寬高
+		// 並先計算出大圖片要垂直置中所需要的 top 值
+		var $gallery = $('#abgne-gallery-20111224'), 
+			$frame = $gallery.find('ul'), 
+			_frameHeight = $frame.height(), 
+			_frameWidth = $frame.width(), 
+			$li = $frame.find('li'), 
+			$img = $li.find('img'), 
+			_imgLength = $img.length, 
+			_imgWidth = $img.width(),
+			_imgHeight = $img.height(),
+			_topDiff = (_frameHeight - _imgHeight) / 2, 
+			_animateSpeed = 200;
+		
+		// 設定每張圖片縮放比例
+		// _totalWidth 用來記錄寬度累加
+		var resizeRatio = [ 0.7, 0.8, 1, 0.8, 0.7], 
+			liCss = [], 
+			_totalWidth = 0;
+		
+		// 預先算出每張圖片縮放後的總寬度
+		var _m = 0;
+		$img.each(function(i){ 
+			_m += $(this).width() * resizeRatio[i];
+		});
+		// 平均分配要重疊的寬度
+		var _leftDiff = Math.ceil((_m - _frameWidth) / (_imgLength - 1));
+		
+		// 設定每一個 li 的位置及圖片寬高
+		$li.each(function(i){
+			var $this = $(this), 
+				_width = _imgWidth * resizeRatio[i],
+				_height = _imgHeight * resizeRatio[i];
+
+			liCss.push({
+				height: _height, 
+				width: _width, 
+				left: _totalWidth  + (i == _imgLength - 1 ? 1 : 0), 
+				top: _topDiff + (_imgHeight - _height) / 2, 
+				zIndex: resizeRatio[i] * 10
+			});
+
+			$this.css(liCss[liCss.length-1]).css({
+				position: 'absolute',
+			}).data('_index', i).find('img').css({
+				width: '100%', 
+				height: '100%'
+			});
+			
+			_totalWidth += _width - _leftDiff;
+		});
+		
+		// 當滑鼠點擊在 $gallery 中的 .controls 時
+		$gallery.on('click', '.controls', function(){
+			var $button = $(this);
+			
+			// 重新計算每一個 li 的位置及圖片寬高
+			$li.each(function(){
+				var $this = $(this), 
+					_index = $this.data('_index');
+
+				_index = ($button.hasClass('next') ? (_index - 1 + _imgLength) : (_index + 1)) % _imgLength;
+				$this.data('_index', _index);
+
+				$this.stop(false, true).animate(liCss[_index], _animateSpeed);
+			});
+
+			return false;
+		});
+	});
+</script>
+</head>
+
+<body>
+<div id="bg">
+<div id="header">
+	<h1><img src="images/logo.jpg" /></h1>
+  <h2><a href="contact.html"><img src="images/bt_contact.jpg"/></a><span><a href="index.html"><img src="images/bt_home.jpg"/></a></span></h2>
+  <ul>
+  	<li><a href="about.html"><img src="images/bt_01.jpg"/></a></li>
+    <li><a href="rooms.html"><img src="images/bt_02.jpg"/></a></li>
+    <li><a href="public.html"><img src="images/bt_03.jpg"/></a></li>
+    <li><a href="order.html"><img src="images/bt_04.jpg"/></a></li>
+    <li><a href="environment.html"><img src="images/bt_05.jpg"/></a></li>
+    <li><a href="location.html"><img src="images/bt_06.jpg"/></a></li>
+  </ul>
+  <hr />
+</div>
+<div id="abgne-gallery-20111224">
+		<a href="#previous" class="controls previous" rel="previous"></a>
+		<a href="#next" class="controls next" rel="next"></a>
+		<ul>
+			<li><span><b>禪風A201</b></span><a href="#" title="Slide 1"><img src="images/a.jpg" /></a></li>
+			<li><span><b>禪風A201</b></span><a href="#" title="Slide 2"><img src="images/b.jpg" /></a></li>
+			<li><span><b>禪風A201</b></span><a href="#" title="Slide 3"><img src="images/c.jpg" /></a></li>
+			<li><span><b>禪風A201</b></span><a href="#" title="Slide 4"><img src="images/d.jpg" /></a></li>
+			<li><span><b>禪風A201</b></span><a href="#" title="Slide 5"><img src="images/e.jpg" /></a></li>
+		</ul>
+	</div>
+<div id="content">
+<div id="leftBox"><img src="images/pic_rooms.jpg" /></div>
+<div id="rightBox" class="rooms">
+	<h1>房型名稱</h1>
+	<table>
+  	<tr>
+    	<th>原價</th>
+      <td>NT6000</td>
+      <th>假日</th>
+      <td>NT3600</td>
+      <th>平日</th>
+      <td>NT2600</td>
+    </tr>
+    <tr>
+    	<th>床型</th>
+      <td>戀戀雙人系列</td>
+      <th>住房人數</th>
+      <td>2人</td>
+      <th>地板</th>
+      <td>木質地板</td>
+    </tr>
+    <tr>
+    	<th>房間坪數</th>
+      <td>8.5坪</td>
+      <th>早餐供應</th>
+      <td>AM7:00~AM10:00</td>
+      <th>加人服務</th>
+      <td>NT1000/人</td>
+    </tr>
+    <tr>
+    	<th>對外窗</th>
+      <td>2扇</td>
+      <th>浴室</th>
+      <td>乾濕分離衛浴</td>
+      <th>孩童同行</th>
+      <td>免費</td>
+    </tr>
+  </table>
+  <dl>
+  	<dt>其他設備</dt>
+    <dd>其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備</dd>
+  </dl>
+  <dl>
+  	<dt>其他設備</dt>
+    <dd>其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備其他設備</dd>
+  </dl>
+  <h3>更多房間照片</h3>
+  <ul>
+  	<li><a href="img/A.jpg" rel="lightbox"><img src="img/sA.jpg"/></a></li>
+    <li><a href="img/B.jpg" rel="lightbox"><img src="img/sB.jpg"/></a></li>
+    <li><a href="img/C.jpg" rel="lightbox"><img src="img/sC.jpg"/></a></li>
+    <li><a href="img/D.jpg" rel="lightbox"><img src="img/sD.jpg"/></a></li>
+    <li><a href="img/E.jpg" rel="lightbox"><img src="img/sE.jpg"/></a></li>
+  </ul>
+</div>
+<hr />
+</div>
+<div id="footer">
+<h1>Copyright © 2012 易訂通科技<br /> 
+All Rights Reserved.</h1>
+<h2>高雄市苓雅區林森二路84號<br />
+Tel / 07-333-5191‧Fax / 07-3335197</h2>
+</div>
+
+
+</div>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/lightbox.js"></script>
+</body>
+</html>

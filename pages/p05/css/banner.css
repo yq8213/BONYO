@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+	#abgne-gallery-20111224 {
+		position: relative;
+		width: 960px;
+		height: 310px;
+		margin:0 auto 10px;
+	}
+	#abgne-gallery-20111224 ul {
+		width: 960px;	
+		height: 310px;
+		position: absolute;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	#abgne-gallery-20111224 li a {
+		outline: none;
+	}
+	#abgne-gallery-20111224 li span{
+		position:absolute;
+		color:#dbc0ce;
+		background:url(../images/word_bg.png) bottom right no-repeat;
+		width:100px;
+		height:50px;
+		right:5px;
+		bottom:3px;
+	}
+	#abgne-gallery-20111224 li b{
+		display:block;
+		padding-top:30px;
+		font-size:18px;
+	}
+	#abgne-gallery-20111224 li a img {
+		vertical-align: middle;
+		border: none;
+		border:1px solid #191919;
+	}
+	#abgne-gallery-20111224 .controls {
+		position: absolute;
+		top:0;
+		display: block;
+		width: 200px;
+		height: 310px;
+		outline: none;
+		z-index:999;
+		background:url(../images/space.gif);
+	}
+	#abgne-gallery-20111224 .previous {
+		left: 0;
+		background-position: -4px 0;
+	}
+	#abgne-gallery-20111224 .next {
+		right: 0;
+		background-position: -49px 0;
+	}

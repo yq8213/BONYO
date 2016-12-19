@@ -1,0 +1,354 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*完成交易*/
+.success{
+	background:url(../images/bg_success.png);
+	height:215px;
+	font-size:15px;
+	color:#731b07;
+}
+.success span{
+	display:block;
+	float:left;
+	margin-top:113px;
+	margin-left:117px;
+	width:470px;
+	line-height:24px;
+}
+.success img{
+	float:right;
+	margin-right:30px;
+	margin-top:130px;
+	width:200px;
+	height:50px;
+}
+.failure{
+	background:url(../images/bg_failure.png);
+	height:215px;
+}
+.failure img{
+	float:right;
+	margin-right:30px;
+	margin-top:130px;
+	width:200px;
+	height:50px;
+}
+/*訂房須知*/
+#note{
+	background:url(../images/bg_b10.png);
+	padding:15px
+}
+#note dl{
+	background:url(../images/bg_w50.png);
+	padding:30px;
+	padding-bottom:60px;
+}
+#note dt{
+	padding-left:44px;
+	font-size:12px;
+	color:#000;
+}
+#note dd{
+	border-bottom:1px dotted #731b07;
+	color:#5d5d5d;
+	font-size:15px;
+	padding:5px 50px 20px;
+	line-height:24px;
+	margin-bottom:20px
+}
+a.prev{
+	width:117px;
+	height:34px;
+	background:url(../images/bt_prev.png) left top no-repeat;
+	display:block;
+	float:right;
+}
+a.next{
+	width:117px;
+	height:34px;
+	background:url(../images/bt_next.png) left top no-repeat;
+	display:block;
+	float:right;
+}
+
+a.prev:hover,a.next:hover{
+	background-position:bottom;
+}
+/*訂單確認,刷卡付費*/
+#order{
+	background:url(../images/bg_b10.png);
+	padding:15px;
+	font-size:12px;
+	color:#731b07;
+}
+#order span{
+	display:block;
+	background:url(../images/bg_w50.png);
+	padding:30px;
+	padding-bottom:60px;
+}
+#order table{
+	width:100%;
+	text-align:center;
+	margin-bottom:10px;
+}
+#order th{
+	line-height:22px;
+}
+#order td{
+	line-height:50px;
+}
+#order td,#order th{
+	border-bottom:1px dotted #731b07;
+	border-right:1px dotted #731b07;
+	font-weight:normal;
+}
+#order td.no_line,#order th.no_line{
+	border-right:none;
+}
+#order td.left,#order th.left{
+	text-align:left;
+	padding-left:15px;
+}
+#order td.right,#order th.right{
+	text-align:right;
+	background:#ebd5d0;
+	padding-right:15px
+}
+#order td.f15{
+	font-size:15px;
+	line-height:35px;
+}
+a.buy{
+	width:117px;
+	height:34px;
+	background:url(../images/bt_buy.png) left top no-repeat;
+	display:block;
+	float:right;
+}
+a.keep{
+	width:117px;
+	height:34px;
+	background:url(../images/bt_keep.png) left top no-repeat;
+	display:block;
+	float:right;
+}
+a.card{
+	width:117px;
+	height:34px;
+	background:url(../images/bt_card.png) left top no-repeat;
+	display:block;
+	float:right;
+}
+a.buy:hover,a.keep:hover,a.card:hover{
+	background-position:bottom;
+}
+/*登入會員*/
+#login{
+	width:842px;
+	margin:30px auto;
+	color:#731b07;
+}
+#login h3{
+	display:block;
+	background:url(../images/bg_login01.jpg) no-repeat;
+	width:356px;
+	height:255px;
+	overflow:hidden;
+	float:left;
+	font-size:15px;
+	padding-top:115px;
+	padding-left:53px;
+	line-height:35px;
+}
+#login h4{
+	display:block;
+	background:url(../images/bg_login02.jpg) no-repeat;
+	width:336px;
+	height:225px;
+	overflow:hidden;
+	float:right;
+	font-size:15px;
+	padding-top:135px;
+	padding-left:65px;
+	line-height:35px;
+}
+#login input{
+	border:1px solid #c1c1c1;
+}
+#login th{
+	text-align:right;
+}
+#login td{
+	padding-left:10px;
+}
+a.check{
+	width:117px;
+	height:34px;
+	background:url(../images/bt_check.png) left top no-repeat;
+	display:block;
+	margin-top:26px;
+	margin-left:93px;
+}
+a.login{
+	width:117px;
+	height:34px;
+	background:url(../images/bt_login.png) left top no-repeat;
+	display:block;
+	margin-top:26px;
+	margin-left:93px;
+}
+a.check:hover,a.login:hover{
+	background-position:bottom;
+}
+/*訂房資訊*/
+#content.mTop_0{
+	margin-top:0;
+	margin-bottom:100px;
+}
+#calendar{
+	background:url(../images/bg_b10.png);
+	width:447px;
+	padding:15px;
+	float:left;
+	margin-right:30px;
+	margin-left:11px;
+}
+#calendar dl{
+	background:#f3f3f3 url(../images/bg_calendar.gif) no-repeat center 15px;
+	padding-bottom:8px;
+}
+#calendar dt{
+	text-align:center;
+	font-size:24px;
+	color:#731b07;
+	font-weight:bold;
+	height:82px;
+	width:430px;
+	margin:0 auto;
+	padding-top:18px;
+}
+#calendar dt span{
+	padding-right:35px;
+}
+#calendar table{
+	border-bottom:1px solid #dcdcdd;
+	border-left:1px solid #dcdcdd;
+	width:427px;
+	margin:0 auto;
+}
+#calendar td{
+	border-top:1px solid #dcdcdd;
+	border-right:1px solid #dcdcdd;
+	background:#fff;
+	width:61px;
+	font-weight:normal;
+	font-size:12px;
+	line-height:18px;
+	padding:5px 0 5px 9px;
+}
+#calendar th{
+	border-top:1px solid #dcdcdd;
+	border-right:1px solid #dcdcdd;
+	background:#fff;
+	width:61px;
+	font-weight:normal;
+	font-size:12px;
+	line-height:18px;
+	text-align:left;
+	color:#a0a0a0;
+	padding:5px 0 5px 9px;
+}
+
+#calendar td span,#calendar td div{
+	color:#d00505;
+}
+#calendar td div.center{
+	text-align:center;
+}
+#roomSelect{
+	margin-top:20px;
+}
+#roomSelect th,#roomSelect td{
+	color:#731b07;
+	text-align:left;
+	border-bottom:1px dotted #731b07;
+	line-height:40px;
+}
+#roomSelect th{
+	width:100px;
+}
+#roomSelect table{
+	border-top:1px dotted #731b07;
+	width:420px;
+	margin-top:20px;
+}
+a.addin{
+	width:117px;
+	height:34px;
+	background:url(../images/bt_addin.png) left top no-repeat;
+	display:block;
+	float:right;
+	margin-top:15px;
+	margin-right:10px;
+}
+a.addin:hover{
+	background-position:bottom;
+}
+#roomSelect td.setnote{
+	font-size:12px;
+	line-height:24px;
+	padding:10px 5px 20px 5px;
+}
+#content h2 span{
+	font-size:12px;
+	font-family:新細明體;
+	font-weight:normal;
+	float:right;
+	margin-right:20px;
+}
+
+a.search{
+	width:117px;
+	height:34px;
+	background:url(../images/bt_search.png) left top no-repeat;
+	display:block;
+	margin-top:26px;
+	margin-left:93px;
+}
+a.search:hover{
+	background-position:bottom;
+}
+#search_login,#password_login{
+	display:block;
+	background:url(../images/bg_login03.jpg) no-repeat;
+	width:356px;
+	height:255px;
+	overflow:hidden;
+	font-size:15px;
+	padding-top:115px;
+	padding-left:53px;
+	line-height:35px;
+	color:#731b07;
+	margin:0 auto;
+}
+#password_login{
+	background:url(../images/bg_login04.jpg) no-repeat;
+}
+#search_login input,#password_login input{
+	border:1px solid #c1c1c1;
+}
+#search_login th,#password_login th{
+	text-align:right;
+}
+#search_login td,#password_login td{
+	padding-left:10px;
+}
+#password_login caption{
+	line-height:20px;
+	font-size:12px;
+	margin-top:-30px;
+	text-align:left;
+	margin-bottom:20px;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>林森會館-飯店簡介</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<link href="css/banner.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	// 當網頁載完後執行(因為要抓圖片的寬高)
+	$(window).load(function(){
+		// 先取得相關區塊及圖片的寬高
+		// 並先計算出大圖片要垂直置中所需要的 top 值
+		var $gallery = $('#abgne-gallery-20111224'), 
+			$frame = $gallery.find('ul'), 
+			_frameHeight = $frame.height(), 
+			_frameWidth = $frame.width(), 
+			$li = $frame.find('li'), 
+			$img = $li.find('img'), 
+			_imgLength = $img.length, 
+			_imgWidth = $img.width(),
+			_imgHeight = $img.height(),
+			_topDiff = (_frameHeight - _imgHeight) / 2, 
+			_animateSpeed = 200;
+		
+		// 設定每張圖片縮放比例
+		// _totalWidth 用來記錄寬度累加
+		var resizeRatio = [ 0.7, 0.8, 1, 0.8, 0.7], 
+			liCss = [], 
+			_totalWidth = 0;
+		
+		// 預先算出每張圖片縮放後的總寬度
+		var _m = 0;
+		$img.each(function(i){ 
+			_m += $(this).width() * resizeRatio[i];
+		});
+		// 平均分配要重疊的寬度
+		var _leftDiff = Math.ceil((_m - _frameWidth) / (_imgLength - 1));
+		
+		// 設定每一個 li 的位置及圖片寬高
+		$li.each(function(i){
+			var $this = $(this), 
+				_width = _imgWidth * resizeRatio[i],
+				_height = _imgHeight * resizeRatio[i];
+
+			liCss.push({
+				height: _height, 
+				width: _width, 
+				left: _totalWidth  + (i == _imgLength - 1 ? 1 : 0), 
+				top: _topDiff + (_imgHeight - _height) / 2, 
+				zIndex: resizeRatio[i] * 10
+			});
+
+			$this.css(liCss[liCss.length-1]).css({
+				position: 'absolute',
+			}).data('_index', i).find('img').css({
+				width: '100%', 
+				height: '100%'
+			});
+			
+			_totalWidth += _width - _leftDiff;
+		});
+		
+		// 當滑鼠點擊在 $gallery 中的 .controls 時
+		$gallery.on('click', '.controls', function(){
+			var $button = $(this);
+			
+			// 重新計算每一個 li 的位置及圖片寬高
+			$li.each(function(){
+				var $this = $(this), 
+					_index = $this.data('_index');
+
+				_index = ($button.hasClass('next') ? (_index - 1 + _imgLength) : (_index + 1)) % _imgLength;
+				$this.data('_index', _index);
+
+				$this.stop(false, true).animate(liCss[_index], _animateSpeed);
+			});
+
+			return false;
+		});
+	});
+</script>
+</head>
+
+<body>
+<div id="bg">
+<div id="header">
+	<h1><img src="images/logo.jpg" /></h1>
+  <h2><a href="contact.html"><img src="images/bt_contact.jpg"/></a><span><a href="index.html"><img src="images/bt_home.jpg"/></a></span></h2>
+  <ul>
+  	<li><a href="about.html"><img src="images/bt_01.jpg"/></a></li>
+    <li><a href="rooms.html"><img src="images/bt_02.jpg"/></a></li>
+    <li><a href="public.html"><img src="images/bt_03.jpg"/></a></li>
+    <li><a href="order.html"><img src="images/bt_04.jpg"/></a></li>
+    <li><a href="environment.html"><img src="images/bt_05.jpg"/></a></li>
+    <li><a href="location.html"><img src="images/bt_06.jpg"/></a></li>
+  </ul>
+  <hr />
+</div>
+<div id="abgne-gallery-20111224">
+		<a href="#previous" class="controls previous" rel="previous"></a>
+		<a href="#next" class="controls next" rel="next"></a>
+		<ul>
+			<li><span><b>禪風A201</b></span><a href="#" title="Slide 1"><img src="images/a.jpg" /></a></li>
+			<li><span><b>禪風A201</b></span><a href="#" title="Slide 2"><img src="images/b.jpg" /></a></li>
+			<li><span><b>禪風A201</b></span><a href="#" title="Slide 3"><img src="images/c.jpg" /></a></li>
+			<li><span><b>禪風A201</b></span><a href="#" title="Slide 4"><img src="images/d.jpg" /></a></li>
+			<li><span><b>禪風A201</b></span><a href="#" title="Slide 5"><img src="images/e.jpg" /></a></li>
+		</ul>
+	</div>
+<div id="content">
+<div id="leftBox"><img src="images/pic_about.jpg" /></div>
+<div id="rightBox" class="about">
+		<p><img src="images/about_tit01.png"/></p>
+  	<div>高雄林森會館位於高雄市中心，交通便利，適合至高雄商務辦公的人。此外，高雄林森會館住宿環境鬧中取靜，鄰近新堀江商店街、城市光廊、六合夜市、新興夜市等景點。如果想要逛街購物，附近有太平洋SOGO、高雄大遠百及新光三越百貨公司。高雄林森會館方便的地理位置是您至高雄商務洽公、觀光旅遊最佳的選擇。<br />
+高雄林森會館是高雄地區的商務飯店代表之一，高雄林森會館提供尊貴VIP、禪風、歐風及溫馨四人房的多樣住房選擇，讓在您可依個人喜好及需求選擇對您最舒適的房間，在這裡你可完全的保有隱私，隔絕與外界的喧鬧。
+  </div>
+  <dl>
+  	<dt>
+    <p><img src="images/about_tit02.png"/></p>
+    <div>高雄林森會館已經使用線上訂房系統，透過安全的線上交易，網友將可以輕鬆的指定入住日期及房型，而高雄林森會館也將不定期的開放特殊優惠專案及房型來回饋使用線上訂房機制的網友，趕緊訂房吧 !讓高雄林森會館為您高雄旅遊留下豐富精彩的回憶！    
+    </div>
+    </dt>
+  	<dd>
+    <p><img src="images/about_tit03.png"/></p>
+    <div>高雄林森會館並提供您最親切的服務，讓每位賓客都有賓至如歸的感受。 堅持服務與用心是高雄林森會館對顧客的承諾，每日派員仔細的清掃每個環境，定期的更新飯店設備，此外，高雄林森會館採用平實的價格來回饋給顧客，細心的為您協助鄰近高雄旗津風景區、西子灣風景區、高雄愛河、高雄都會公園、壽山動物園等旅遊的行程規劃與其它的商務服務，您的再次造訪將是對於高雄林森會館的最佳鼓勵。
+    </div>
+    </dd>
+  </dl>
+</div>
+<hr />
+</div>
+<div id="footer">
+<h1>Copyright © 2012 易訂通科技<br /> 
+All Rights Reserved.</h1>
+<h2>高雄市苓雅區林森二路84號<br />
+Tel / 07-333-5191‧Fax / 07-3335197</h2>
+</div>
+
+
+</div>
+</body>
+</html>

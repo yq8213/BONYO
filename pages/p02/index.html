@@ -1,0 +1,488 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<title>红星美凯龙购物商城</title>
+<meta name="keywords" content="红星美凯龙购物商城" />
+<meta name="description" content="红星美凯龙购物商城" />
+    
+<link href="css/import.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/fontsize_l.css" type="text/css" rel="alternate stylesheet" title="l size" />
+<link href="css/fontsize_m.css" type="text/css" rel="alternate stylesheet" title="m size" />
+<link href="css/fontsize_s.css" type="text/css" rel="alternate stylesheet" title="s size" />
+<link href="css/index.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/header.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/mall.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/footer.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/menu.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+
+<body>
+<div id="header">
+    <ul>
+        <li><a href="/">首页</a></li>
+        <li><a href="#">联络我们</a></li>
+        <li><a href="#">全国门店</a></li>
+        <li><a href="#">网站地图</a></li>
+    </ul>
+    <hr />
+</div>
+<div id="menubar">
+    <div id="scname"><a href="/"><img src="images/scname.jpg" alt="红星美凯龙购物商城" width="118" height="40" /></a></div>    
+<ul id="menu">  
+  <li><a href="/" ><img src="images/00445e72-6678-40dc-a728-19a5ab3e25fa.jpg" onmouseout="this.src='images/00445e72-6678-40dc-a728-19a5ab3e25fa.jpg'" onmouseover="this.src='images/a63662c5-a540-4cb4-ba0d-671e858c9094.jpg'" alt="回首頁" /></a>
+  </li>  
+  <li><a href="" ><img src="images/0989cd2e-4349-4b6e-9d0e-ed960900d5fb.jpg" onmouseout="this.src='images/0989cd2e-4349-4b6e-9d0e-ed960900d5fb.jpg'" onmouseover="this.src='images/bfa93759-9d72-40b0-bf6e-ccdf9b7068e4.jpg'" alt="活动专区" /></a>
+  </li>  
+  <li><a href="" ><img src="images/fc3d0ef9-d4b7-49ec-8a0c-dd1439ace5a3.jpg" onmouseout="this.src='images/fc3d0ef9-d4b7-49ec-8a0c-dd1439ace5a3.jpg'" onmouseover="this.src='images/32ec886e-a0e6-4029-9324-48341daf8187.jpg'" alt="楼层导览" /></a>
+  </li>
+  <li><a href="" ><img src="images/35e6e42f-8641-443b-8c9f-19987b06626b.jpg" onmouseout="this.src='images/35e6e42f-8641-443b-8c9f-19987b06626b.jpg'" onmouseover="this.src='images/13661120-f913-488b-b197-194fe8eb8027.jpg'" alt="地图位置" /></a>
+  </li>  
+  <li><a href="http://tools.mmall.com/mjdr.html" target="_blank"><img src="images/18c85790-3ec3-4c15-bbd5-0aaaa4073ccc.jpg" onmouseout="this.src='images/18c85790-3ec3-4c15-bbd5-0aaaa4073ccc.jpg'" onmouseover="this.src='images/fd0cbe3f-96bf-4dc4-8d0c-d6427d632909.jpg'" alt="百寶箱" /></a>
+  </li>
+</ul>
+    <div id="search"><input /></div>
+    <hr />
+</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link href="css/headbanner.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+    $(function() {
+        // 大廣告圖片的高度及動畫時間
+        // 計時器及輪播時間(毫秒)
+        var adHeight = 321,
+			animateSpeed = 800,
+			timer,
+			speed = 9500;
+
+        function showNext() {
+            // 找出目前是第幾個選項被展示出來(jQuery 1.4)
+            var $li = $('#adblock ul.link li'),
+				no = $li.has('a.selected').index();
+
+            // 計算出下一個要展示的廣告選項
+            no = (no + 1) % $li.length;
+
+            // 觸發指定選項的 mouseover 事件
+            $li.eq(no).children('a').mouseover();
+
+            // 再啟動計時器
+            timer = setTimeout(showNext, speed);
+        }
+
+        $('#adblock ul.link li a').each(function(i) {
+            $(this).css('top', i * 98);
+        }).hover(function() {
+            var $this = $(this),
+            // 找出目前 li 是在選單中的第幾個(jQuery 1.4)
+				no = $this.parent().index();
+
+            // 先移除有 .selected 的超連結的樣式
+            $('#adblock ul.link li a.selected').removeClass('selected');
+            // 再把目前點擊到的超連結加上 .selected
+            $this.addClass('selected');
+
+            // 把 ul.showbox 的 top 移到相對應的高度
+            $('#adblock ul.showbox').stop().animate({
+                top: adHeight * no * -1
+            }, animateSpeed);
+
+            // 移除計時器
+            clearTimeout(timer);
+        }, function() {
+            // 啟動計時器
+            timer = setTimeout(showNext, speed);
+        }).focus(function() {
+            $(this).blur();
+        }).eq(0).addClass('selected');
+
+        // 當滑鼠移到廣告上時停止計時器..移出後啟動計時器
+        $('#adblock ul.showbox li').hover(function() {
+            clearTimeout(timer);
+        }, function() {
+            timer = setTimeout(showNext, speed);
+        });
+
+        // 啟動計時器
+        timer = setTimeout(showNext, speed);
+    });
+</script>
+	<div id="adblock">
+		<ul class="showbox">
+			<li><a href="#"><img src="images/b2.jpg" /></a></li>
+			<li><a href="#"><img src="images/b2.jpg" /></a></li>
+			<li><a href="#"><img src="images/b2.jpg" /></a></li>
+		</ul>
+		<div class="linktit"><img src="images/b4.jpg" /></div>
+		<ul class="link">
+			<li><a href="#"><img src="images/b5.jpg" /></a></li>
+			<li><a href="#"><img src="images/b6.jpg" /></a></li>
+			<li><a href="#"><img src="images/b7.jpg" /></a></li>
+		</ul>
+	</div>
+
+<script type="text/javascript" src="js/mobanwang.js"></script>
+<link href="css/mobanwang.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+    $(function() {
+        // 先取得必要的元素並用 jQuery 包裝
+        // 再來取得 $block 的高度及設定動畫時間
+        var $block = $('#abgne-block-20110317'),
+			$slides = $block.find('ul.abgne-list'),
+			_width = $block.width(),
+			$li = $slides.find('li'),
+			$control = $block.find('.abgne-control'),
+			_animateSpeed = 600,
+        // 加入計時器, 輪播時間及控制開關
+			timer, _showSpeed = 3000, _stop = false;
+
+        // 設定 $slides 的寬(為了不讓 li 往下擠)
+        $slides.css('width', ($li.length + 1) * _width);
+        // 產生 li 選項
+        var _str = '';
+        for (var i = 0, j = $li.length; i < j; i++) {
+            // 每一個 li 都有自己的 className = playerControl_號碼
+            _str += '<li class="abgne-player-control_' + (i + 1) + '">' + (i + 1) + '</li>';
+        }
+
+        // 產生 ul 並把 li 選項加到其中
+        var $number = $('<ul class="numbers"></ul>').html(_str).appendTo($control),
+			$numberLi = $number.find('li');
+
+        // 並幫 .numbers li 加上 click 事件
+        $numberLi.click(function() {
+            var $this = $(this);
+            $this.addClass('current').siblings('.current').removeClass('current');
+
+            clearTimeout(timer);
+            // 移動位置到相對應的號碼
+            $slides.stop().animate({
+                left: _width * $this.index() * -1
+            }, _animateSpeed, function() {
+                // 當廣告移動到正確位置後, 依判斷來啟動計時器
+                if (!_stop) timer = setTimeout(move, _showSpeed);
+            });
+
+            return false;
+        }).eq(0).click();
+
+        // 幫 .arrows li 加上 click 事件
+        $control.find('ul.arrows li').click(function() {
+            var _index = $numberLi.filter('.current').index();
+            $numberLi.eq((this.className.indexOf('next') > -1 ? _index + 1 : _index - 1 + $numberLi.length) % $numberLi.length).click();
+
+            return false;
+        });
+
+        // 當滑鼠移到 $control li 上時, 加上 .hover 效果
+        // 反之則移除
+        $control.find('li').hover(function() {
+            $(this).addClass('hover');
+        }, function() {
+            $(this).removeClass('hover');
+        });
+
+        // 如果滑鼠移入 $slides 時
+        $slides.hover(function() {
+            // 關閉開關及計時器
+            _stop = true;
+            clearTimeout(timer);
+        }, function() {
+            // 如果滑鼠移出 $block 時
+            // 開啟開關及計時器
+            _stop = false;
+            timer = setTimeout(move, _showSpeed);
+        });
+
+        // 計時器使用
+        function move() {
+            $control.find('ul.arrows li.next').click();
+        }
+    });
+</script>
+    
+
+    <div id="abgne-block-20110317">
+		    <div class="abgne-player">
+			    <ul class="abgne-list">			        
+				   <li><img alt="活动名称" src="images/b6c24219-8979-4c76-81f5-fc3111d8b5be.jpg" /></li>			    
+				   <li><img alt="活动名称" src="images/23479dcd-de5b-44c3-930f-25fca35b6731.jpg" /></li>			    
+			    </ul>
+		    </div>
+		    <div class="abgne-control">
+			    <ul class="arrows"> 
+				    <li class="prev">&nbsp;</li> 
+				    <li class="next">&nbsp;</li> 
+			    </ul>
+		    </div>
+	    </div>
+
+    <div id="contents">
+        <div id="mainBox">
+        <div id="leftLink">
+<h1>商品目录</h1>
+<dl>  	<dt>家具</dt>    <dd>精品小家具<br />床<br /> 床垫<br /> 沙发<br /> 柜类<br /> 桌类<br /> 椅/凳/榻<br /> 架箱<br /> 商业办公<br /> 儿童家具<br /> </dd>  </dl>  <dl>  	<dt>家居</dt>    <dd>床品套件<br /> 窗帘(定制)<br /> 家居饰品<br /> 收纳盒/箱/凳<br /> 厨用工具<br /> 衣物洗/晒/护理用具<br /> 小家电<br /> 大家电<br /></dd>  </dl>  <dl>  	<dt>建材</dt>    <dd>厨柜/水槽<br /> 吊顶/浴霸<br /> 厨卫电器<br /> 卫浴洁具<br /> 地板/地暖<br /> 墙纸/涂料<br /> 门窗<br /> 灯具/开关<br /> 五金/板材<br /></dd>  </dl>  </div>
+  
+        <div id="rightBox">
+            
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+    // 背景區塊的透明度	
+    var _opacity = .6;
+    $(function() {
+        // 把每一個 index_shopnews 取出做處理
+        $('.index_shopnews').each(function() {
+            // 取得標題及說明描述的高度
+            var $this = $(this),
+				$title = $this.find('.title'),
+				_titleHeight = $title.outerHeight(true),
+				$desc = $this.find('.desc'),
+				_descHeight = $desc.outerHeight(true),
+				_speed = 400;
+
+            // 設定 $desc 的高度為 0 並顯示
+            // 接著插入一個當做背景用的區塊
+            $desc.css({
+                height: 0,
+                display: 'block'
+            }).append($('<div></div>').css({
+                height: _descHeight,
+                opacity: _opacity
+            }).addClass('maskCss')).find('p').css('position', 'absolute');
+
+            // 插入一個當做背景用的區塊
+            $title.append($('<div></div>').css({
+                height: _titleHeight,
+                opacity: _opacity
+            }).addClass('maskCss'));
+
+            // 當滑鼠移到區塊上時
+            $this.hover(function() {
+                // 改變 $desc 的高度為原本高度
+                $desc.stop().animate({
+                    height: _descHeight
+                }, _speed);
+            }, function() {
+                // 改變 $desc 的高度為 0
+                $desc.stop().animate({
+                    height: 0
+                }, _speed);
+            });
+        });
+    });
+</script>
+    <h2 class="title">Hot Product 热卖商品</h2>
+    
+	<div class="index_shopnews index_shopnews_block2" style="margin-right:30px;">
+		<a href="#"><img src="images/3ec95528-86c8-458a-8507-b01c4823b5da.jpg" title="" alt="" height="224" /></a>
+		<div class="desc">
+		    <h3><a href="#" title="瑞西屋工坊">瑞西屋工坊</a></h3>
+			<p>德国真空进口茶杯套<br/>
+全面4折起</p>
+		</div>
+	</div>
+    
+     
+	<div class="index_shopnews index_shopnews_block2" style="margin-right:30px;">
+		<a href="#"><img src="images/08fdb167-d4a2-426a-9ddf-bc105c0ccb0b.jpg" title="" alt="" height="224" /></a>
+		<div class="desc">
+		    <h3><a href="#" title="瑞西屋工坊">瑞西屋工坊</a></h3>
+			<p>德国真空进口茶杯套<br/>
+全面4折起</p>
+		</div>
+	</div>
+    
+     
+	<div class="index_shopnews index_shopnews_block2"  >
+		<a href="#"><img src="images/d449bc5a-6f43-4ee9-8b13-d0865debc68a.jpg" title="" alt="" height="224" /></a>
+		<div class="desc">
+		    <h3><a href="#" title="瑞西屋工坊">瑞西屋工坊</a></h3>
+			<p>德国真空进口茶杯套<br/>
+全面4折起</p>
+		</div>
+	</div>
+    <hr />
+     
+	
+    <h2 class="title">New Product 新品上架</h2>
+    
+	<div class="index_shopnews index_shopnews_block2" style="margin-right:30px;">
+		<a href="#"><img src="images/3ec95528-86c8-458a-8507-b01c4823b5da.jpg" title="" alt="" height="224" /></a>
+		<div class="desc">
+		    <h3><a href="#" title="瑞西屋工坊">瑞西屋工坊</a></h3>
+			<p>德国真空进口茶杯套<br/>
+全面4折起</p>
+		</div>
+	</div>
+    
+     
+	<div class="index_shopnews index_shopnews_block2" style="margin-right:30px;">
+		<a href="#"><img src="images/08fdb167-d4a2-426a-9ddf-bc105c0ccb0b.jpg" title="" alt="" height="224" /></a>
+		<div class="desc">
+		    <h3><a href="#" title="瑞西屋工坊">瑞西屋工坊</a></h3>
+			<p>德国真空进口茶杯套<br/>
+全面4折起</p>
+		</div>
+	</div>
+    
+     
+	<div class="index_shopnews index_shopnews_block2"  >
+		<a href="#"><img src="images/d449bc5a-6f43-4ee9-8b13-d0865debc68a.jpg" title="" alt="" height="224" /></a>
+		<div class="desc">
+		    <h3><a href="#" title="瑞西屋工坊">瑞西屋工坊</a></h3>
+			<p>德国真空进口茶杯套<br/>
+全面4折起</p>
+		</div>
+	</div>
+    <hr />
+     
+            
+  
+  
+  <div id="shopBox">
+    <h1><span>Brand</span> 热卖品牌</h1>
+    
+      <dl style="margin-right:15px;">
+          
+   
+  <dt><img src="images/39e340e5-bb28-486e-9cdc-1b909a9a2a56.jpg" alt="品牌名称" hight="130" oncontextmenu="return false" /></dt>
+  
+       <dd>品牌名称</dd>
+    </dl>
+    <dl style="margin-right:15px;">
+          
+   
+  <dt><img src="images/497c4ff6-069a-453e-8d2a-1a6d63676f5e.jpg" alt="品牌名称" hight="130" oncontextmenu="return false" /></dt>
+  
+       <dd>品牌名称</dd>
+    </dl>
+    <dl style="margin-right:15px;">
+          
+   
+  <dt><img src="images/f4aadf92-7932-41e6-89bf-90ae91af9b5a.jpg" alt="品牌名称" hight="130" oncontextmenu="return false" /></dt>
+  
+       <dd>品牌名称</dd>
+    </dl>
+    <dl style="margin-right:15px;">
+          
+   
+  <dt><img src="images/c494de02-2f02-42ce-8aa3-75138ffa0500.jpg" alt="品牌名称" hight="130" oncontextmenu="return false" /></dt>
+  
+       <dd>品牌名称</dd>
+    </dl>
+    <dl>
+          
+   
+  <dt><img src="images/72d34dbb-4019-427a-9900-eecba63bcead.jpg" alt="品牌名称" hight="130" oncontextmenu="return false" /></dt>
+  
+       <dd>品牌名称</dd>
+    </dl>
+    
+
+  </div>
+        </div>
+        
+<iframe width="100%" height="550" style=" width:952px; margin:50px auto 0" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=3174815074&verifier=7c091993&dpc=1"></iframe>
+        </div>
+    </div>
+      <!-- coreShop end -->
+  
+  
+  <div id="footer">
+    
+<div id="globalNavi">
+  <ul>
+    
+      <li>
+      
+            <a href="" >
+      关于我们</a>
+      </li>
+    
+      <li>
+      
+            <a href="" >
+      友情链接</a>
+      </li>
+    
+      <li>
+      
+            <a href="" >
+      合作伙伴</a>
+      </li>
+    
+      <li>
+      
+            <a href="" target="_blank">
+      在线商城</a>
+      </li>
+    
+      <li>
+      
+            <a href="" target="_blank">
+      全国门店</a>
+      </li>
+    
+      <li>
+      
+            <a href="" target="_blank">
+      联系我们</a>
+      </li>
+    
+      <li>
+      
+            <a href="" >
+      人才招聘</a>
+      </li>
+    
+      <li>
+      
+            <a href="/" >
+      回首页</a>
+      </li>
+    
+  </ul>
+</div>
+    <div id="copyright"><div style="background: url(images/footerLine.jpg) no-repeat 0 0; color: #fff; width: 955px; margin: 0 auto; text-align: left; padding: 30px 0 50px 3px;">pudong.chinaredstar.com &copy; 2013│红星美凯龙 -上海浦东商场</div> </div>
+  </div>
+
+</body>
+</html>
+<script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
+
+    <script language="javascript">
+    $(function(){
+	    $('#top').click(function(){
+		    $('html,body').animate({scrollTop: '#'}, 800);
+	    }); 
+    	
+	    $('#ct').click(function(){
+		    $('html,body').animate({scrollTop:$('#').offset().top}, 800);
+	    });
+    	
+	    $('#ft').click(function(){
+		    $('html,body').animate({scrollTop:$('#').offset().top}, 800);
+		});
+		
+		$('#et').click(function() {
+		    $('html,body').animate({ scrollTop: $('#').offset().top }, 800);
+		});
+    });
+    </script>
+    <div id="roll">
+        <div id="top"></div>
+        <div id="ft"></div>
+        <div id="ct"></div>
+        <div id="et"></div>
+    </div>
+<script type="text/javascript" src="/js/down.js"></script>

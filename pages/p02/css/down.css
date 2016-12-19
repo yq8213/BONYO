@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* slidebox */
+.slidebox{width:300px;height:90px;overflow:hidden;position:relative; border-left:1px solid #dcdcdc;}
+.slidepic{position:absolute;}/* 必要元素 */
+.slidepic li{height:90px;overflow:hidden;}
+.slidebox img{ width:300px;}
+#leftpic{
+    float:left;
+    width:597px;
+    height:90px;
+    overflow:hidden;
+    }
+#leftpic img{
+    float:left;
+    width:597px;
+    }

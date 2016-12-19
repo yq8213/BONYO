@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+	a img {
+		border: none;
+		vertical-align: middle;
+	}
+	.banner_bg{
+		background:url(../images/bg_banner1.png) no-repeat;
+		width: 945px;
+		height: 374px;
+		margin-bottom:20px;
+	}
+	#adblock {
+		overflow: hidden;
+		width: 904px;	/* 廣告圖片的寬 + 選單圖片最大的寬 */
+		height: 340px;	/* 廣告圖片的高 */
+		position: relative;
+		top:16px;
+		left:20px;
+	}
+	#adblock ul, #adblock li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	#adblock ul.showbox, #adblock ul.link {
+		position: absolute;
+	}
+	#adblock ul.showbox li a {
+		display: block;
+		height: 340px;	/* 廣告圖片的高 */
+	}
+	#adblock ul.link {
+		right: 0;
+	}
+	#adblock ul.link li a {
+		display: block;
+		width: 304px;	/* 滑鼠未移入時的選單圖片寬 */
+		height: 63px;	/* 選單圖片的高 */
+		position: absolute;
+		font-size:12px;
+		text-decoration:none;
+		color:#000;
+		background-color: #ccc;
+		right: 0;
+		border-top:1px solid #ccc;
+		border-bottom:1px solid #ccc;
+		background:#fdfdfd url(../images/bannerSet_off_bg.gif) bottom repeat-x;
+	}
+	#adblock ul.link li a b{
+		font-size:15px;
+		padding-top:15px;
+		display:block;
+		padding-left:30px;
+	}
+	#adblock ul.link li a span{
+		display:block;
+		padding-left:30px;
+	}
+
+	#adblock ul.link li a.selected {
+		width: 324px;	/* 滑鼠移入時的選單圖片寬 */
+		background: url(../images/bannerSet_on_bg.png) no-repeat;
+		border:none;
+		height:64px;
+		z-index:999;
+	}
+		#adblock ul.link li  a.selected b{
+		padding-left:50px;
+	}
+	#adblock ul.link li  a.selected span{
+		padding-left:50px;
+	}
+

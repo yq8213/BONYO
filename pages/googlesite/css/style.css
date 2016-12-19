@@ -1,0 +1,285 @@
+/* line 3, ../sass/style.sass */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+/* line 13, ../sass/style.sass */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 16, ../sass/style.sass */
+html {
+  background: #423f6e;
+  height: 1449px;
+}
+
+/* line 22, ../sass/style.sass */
+.banner {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 27, ../sass/style.sass */
+.banner:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url(../images/banner_bg.png);
+  z-index: 99;
+}
+
+/* line 36, ../sass/style.sass */
+.logo {
+  position: absolute;
+  font-size: 350%;
+  color: #fff;
+  z-index: 100;
+  font-family: sans-serif;
+  text-align: center;
+  width: 100%;
+  top: 35%;
+}
+
+/* line 45, ../sass/style.sass */
+.photo_box {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+/* line 50, ../sass/style.sass */
+.photo_box li {
+  position: absolute;
+  width: 100%;
+  min-width: 1920px;
+  left: 50%;
+  margin-left: -960px;
+  height: 500px;
+  white-space: nowrap;
+  background: #ccc;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* line 62, ../sass/style.sass */
+.simplePagerContainer {
+  height: 650px;
+  overflow: hidden;
+}
+
+/* line 65, ../sass/style.sass */
+.product_box {
+  width: 1200px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+/* line 69, ../sass/style.sass */
+.product_box dl {
+  width: 220px;
+  height: 235px;
+  float: left;
+  margin-right: 1.5%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 77, ../sass/style.sass */
+.product_box dl:nth-child(5n) {
+  margin-right: 0;
+}
+/* line 80, ../sass/style.sass */
+.product_box dl:hover dt {
+  top: 0;
+  height: 180px;
+}
+/* line 83, ../sass/style.sass */
+.product_box dl:hover dd {
+  bottom: 0;
+}
+/* line 85, ../sass/style.sass */
+.product_box dt {
+  position: absolute;
+  top: 15px;
+  height: 220px;
+  -moz-transition-property: top, height;
+  -o-transition-property: top, height;
+  -webkit-transition-property: top, height;
+  transition-property: top, height;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+/* line 91, ../sass/style.sass */
+.product_box dt img {
+  width: 100%;
+  max-height: 100%;
+}
+/* line 94, ../sass/style.sass */
+.product_box dd {
+  font-family: sans-serif;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -70px;
+  background: #000;
+  text-align: center;
+  color: #fff;
+  opacity: 0.9;
+  padding: 10px 0;
+  -moz-transition-property: bottom;
+  -o-transition-property: bottom;
+  -webkit-transition-property: bottom;
+  transition-property: bottom;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+/* line 107, ../sass/style.sass */
+.product_box dd span {
+  display: inline-block;
+  font-size: 75%;
+  border: 1px solid #fff;
+  padding: 1.5% 4%;
+  margin: 2% auto;
+}
+
+/* line 113, ../sass/style.sass */
+.news_box {
+  width: 1200px;
+  margin: 10px auto;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+/* line 118, ../sass/style.sass */
+.news_box a {
+  text-decoration: none;
+}
+/* line 120, ../sass/style.sass */
+.news_box dl {
+  width: 23%;
+  display: inline-block;
+  vertical-align: top;
+  background: #fff;
+  padding: 1%;
+  margin: 0 10px 15px;
+}
+/* line 127, ../sass/style.sass */
+.news_box dl:hover {
+  opacity: 0.9;
+}
+/* line 129, ../sass/style.sass */
+.news_box dt {
+  height: 130px;
+  width: 252px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+/* line 137, ../sass/style.sass */
+.news_box dd {
+  line-height: 130%;
+  color: #464646;
+  word-wrap: break-word;
+  margin-top: 10px;
+}
+/* line 142, ../sass/style.sass */
+.news_box dd font {
+  display: inline-block;
+  background: #949cdb;
+  color: #fff;
+  font-size: 75%;
+  padding: 1% 5%;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 970px) {
+  /* line 151, ../sass/style.sass */
+  .product_box {
+    width: 100%;
+  }
+  /* line 153, ../sass/style.sass */
+  .product_box dl {
+    width: 47%;
+    height: 180px;
+    margin-right: 5%;
+  }
+  /* line 157, ../sass/style.sass */
+  .product_box dl:nth-child(5n) {
+    margin-right: 5%;
+  }
+  /* line 159, ../sass/style.sass */
+  .product_box dl:nth-child(2n) {
+    margin-right: 0;
+  }
+  /* line 161, ../sass/style.sass */
+  .product_box dt {
+    width: 100%;
+  }
+
+  /* line 163, ../sass/style.sass */
+  .banner {
+    width: 100%;
+  }
+
+  /* line 165, ../sass/style.sass */
+  .news_box {
+    width: 100%;
+  }
+  /* line 167, ../sass/style.sass */
+  .news_box dl {
+    width: 100%;
+  }
+  /* line 169, ../sass/style.sass */
+  .news_box dt, .news_box dd {
+    display: inline-block;
+    vertical-align: top;
+  }
+  /* line 172, ../sass/style.sass */
+  .news_box img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 175, ../sass/style.sass */
+  .news_box dt {
+    width: 30%;
+    height: auto;
+    margin-bottom: 0;
+    margin-right: 2%;
+  }
+  /* line 180, ../sass/style.sass */
+  .news_box dd {
+    width: 65%;
+    margin-top: 0;
+  }
+  /* line 183, ../sass/style.sass */
+  .news_box dd h3 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  /* line 188, ../sass/style.sass */
+  .news_box dd font {
+    margin-bottom: 1%;
+  }
+}

@@ -1,0 +1,168 @@
+﻿@charset "utf-8";
+
+/* ===================================================================
+CSS information
+
+ file name  : mall.css
+ style info : モールスタイル設定用
+              ※背景色と関係する文字色もここで指定
+=================================================================== */
+
+/*----------------------------------------------------
+ リンク
+----------------------------------------------------*/
+a {
+	color: #e4007f;
+}
+
+/*----------------------------------------------------
+ ページ全体
+----------------------------------------------------*/
+body {
+}
+
+#contents {
+	border-top: 1px solid #dddddd;
+	margin-top:10px;
+	clear:both;
+}
+#mainBox
+{
+    width:955px;
+    margin:0 auto;
+}
+#top,#ft,#ct,#et {
+	position:relative;
+	cursor:pointer;
+	height:73px;
+	width:72px;
+	}
+#top {
+	background:url(../img/index_roll.png) no-repeat;
+	}
+#ft {
+	background:url(../img/index_roll.png) no-repeat 0 -73px;
+	}
+#ct {
+	background:url(../img/index_roll.png) no-repeat 0 -146px;
+	}
+#et {
+	background:url(../img/index_roll.png) no-repeat 0 -219px;
+	}
+
+#roll {
+	display:block;
+	width:72px;
+	position:fixed;
+	right:0;
+	top:20%;
+	}
+
+
+/*----------------------------------------------------
+ メニュー
+----------------------------------------------------*/
+#menu {
+}
+
+#menu li ul li {
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	border-left: 1px solid #fff;
+}
+
+#menu li ul li {
+	color: #fff;
+	background-color: #f17aae;
+}
+
+#menu li ul li:hover,
+#menu li ul li a:hover {
+	color: #352828;
+	background-color: #ffd4e6;
+}
+
+#menu li ul li a {
+	color: #fff;
+}
+
+/*----------------------------------------------------
+ コンテンツ
+----------------------------------------------------*/
+
+/*----------------------------------------------------
+ トップページ
+----------------------------------------------------*/
+#mainBox dl.ndate dd {
+	color: #e4007f;
+	font-size: 84%;
+}
+
+#mainBox div.news h2 {
+	color: #fff;
+}
+
+#mainBox div.news h3 a,
+#mainBox div.news p a {
+	color: #333333;
+}
+
+/*----------------------------------------------------
+ BOX
+----------------------------------------------------*/
+/* トップページ */
+#calendarBox dd,
+#flierBox dd,
+#mailmagBox dd,
+#downloadBox dd,
+#sharelinkBox dd,
+#stickerBox dd,
+#gourmetBox dd,
+#sportsBox dd,
+#counterBox dd,
+#bonusBox dd,
+#timetableBox dd {
+	border: 1px solid #f17aae;
+}
+
+/* 第二階層 */
+#controlBox dd {
+	border: 1px solid #f17aae;
+	border-top: none;
+}
+
+#controlBox dd ul li {
+	border-top: 1px dotted #231815;
+}
+
+/*----------------------------------------------------
+ 第二階層
+----------------------------------------------------*/
+#controlBox #menuBox dd ul li a:hover {
+	background-color: #ffd4e6;
+}
+
+#newsBox h1 {
+	color: #fff;
+	background-color: #e264a8;
+}
+
+#newsBox table.tinews {
+	background-color: #e264a8;
+}
+
+#newsBox table.tinews th,
+#newsBox table.tinews td {
+	color: #fff;
+}
+
+/* クーポン */
+tr.cheader,
+tr.cfooter {
+	color: #fff;
+	background-color: #e264a8;
+}
+
+/*----------------------------------------------------
+ フッター
+----------------------------------------------------*/

@@ -1,0 +1,67 @@
+<script language="VBScript" runat="Server">
+Const ForReading = 1
+Const ForWriting = 2
+Dim strCounterFile
+strCounterFile = "C:\Counter.txt"
+Sub Application_OnStart
+   Dim intCounter
+   intCounter = ReadCounter()
+   Application.Lock
+   ' 初始訪客計數的Application變數
+   If intCounter <> "" Then
+      Application("Counter") = intCounter 
+   Else
+      Application("Counter") = 0 
+   End If
+   Application.Unlock
+End Sub
+
+Sub Application_OnEnd
+   ' 儲存訪客計數
+   Call SaveCounter(Application("Counter"))    
+End Sub
+
+Sub Session_OnStart
+   Application.Lock
+   ' 新增訪客計數
+   Application("Counter") = Application("Counter") + 1
+   Application.Unlock 
+End Sub
+'  讀取檔案的訪客計數
+Function ReadCounter()
+    Dim objFSO, objInStream
+    Set objFSO = Server.CreateObject("Scripting.FileSystemObject")	
+    ' 檢查檔案是否存在
+    If objFSO.FileExists(strCounterFile) Then
+        Set objInStream = objFSO.OpenTextFile(strCounterFile, ForReading, False, False)
+        If Not objInstream.AtEndOfStream Then
+           ' 讀取訪客計數
+           ReadCounter = objInstream.ReadLine
+        Else
+           ReadCounter = 0
+        End If
+        objInStream.Close
+        Set objInStream = Nothing
+    Else
+        ReadCounter = 0
+    End If
+    Set objFSO = Nothing
+End Function
+' 儲存訪客計數到文字檔案
+Sub SaveCounter(intCounter)
+    Dim objFSO, objOutStream
+    Set objFSO = Server.CreateObject("Scripting.FileSystemObject")
+    If objFSO.FileExists(strCounterFile) Then
+        ' 開啟文字檔案
+        Set objOutStream = objFSO.OpenTextFile(strCounterFile, ForWriting, True, False)
+    Else
+        ' 建立新的文字檔案
+        Set objOutStream = objFSO.CreateTextFile(strCounterFile, True)
+    End If
+    ' 寫入訪客計數
+    objOutStream.WriteLine(intCounter)
+    objOutStream.Close
+    Set objOutStream = Nothing
+    Set objFSO = Nothing
+End Sub
+</script>

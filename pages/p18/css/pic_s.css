@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+html,body {
+	-webkit-text-size-adjust:none;
+	padding: 0;
+	margin: 0;
+}/*chrome font-size<12px */
+body {
+	color: #5c5c5c;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	overflow: hidden;
+	background-color: #FFF;
+  background-image: url("../images/bg.jpg");
+  background-repeat: repeat;
+}
+#all_left {
+  position: relative;
+}
+#pic_align{
+	position: absolute;
+	top:0px;
+	left:0px;
+	width:515px;
+	height:700px;
+	overflow:hidden;
+
+}
+/*#pic_zoom{
+	position: absolute;
+	top:0px;
+	left:0px;
+	width:515px;
+	height:700px;
+	z-index:4;
+}*/
+
+#pic_zoom{
+	position: absolute;
+	top:0px;
+	left:0px;
+	width:515px;
+	height:700px;
+	z-index:4;
+}
+#pic_zoom ._item {
+	display: block;
+	float: left;
+	overflow:hidden;
+}
+#content_margin{
+  position: absolute;
+  top:0px;
+  right:0px;
+  width:350px;
+}
+#content{
+  position: relative;
+  margin-left:44px;
+  margin-top:85px;
+}

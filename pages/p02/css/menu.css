@@ -1,0 +1,83 @@
+﻿@charset "utf-8";
+
+/* ===================================================================
+CSS information
+
+ file name  : menu.css
+ style info : メニュー用
+=================================================================== */
+
+#menu {
+	height: 44px;
+	width: 545px;
+	overflow: hidden;
+	z-index: 100;
+	display: block;
+	text-align: left;
+	float:left;
+}
+
+#menu li {
+	float: left;
+	display: inline;
+	z-index: 100;
+}
+
+#menu li a:hover {
+	position: relative;
+	z-index: 100;
+}
+
+/*----------------------------------------------------
+ メニュープルダウン
+----------------------------------------------------*/
+#menu li ul {
+	position: absolute;
+	width: 200px;
+	overflow: hidden;
+	visibility: hidden;
+	z-index: 100;
+}
+
+*:first-child+html #menu li ul { /* FOR IE7 */
+	top: 117px;
+	z-index: 100;
+}
+
+#menu li:hover ul {
+	overflow: visible;
+	visibility: visible;
+	z-index: 100;
+}
+
+#menu li a:hover ul { /* FOR IE6 */
+	overflow: visible;
+	visibility: visible;
+	top: 40px;
+	z-index: 100;
+}
+
+*:first-child+html #menu li ul li { /* FOR IE7 */
+	position: relative;
+	left: -204px;
+	z-index: 100;
+}
+
+#menu li ul li a {
+	width: 175px;
+	padding: 14px 12px;
+	display: block;
+	z-index: 100;
+}
+
+#menu li ul li a:hover {
+	text-decoration: none;
+	z-index: 100;
+}
+
+#menu li table { /* FOR IE6 */
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
