@@ -188,6 +188,15 @@ html html {
   }
 }
 
+.flash_hid {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .flash_hid {
+    display: block;
+  }
+}
+
 .contact_form {
   padding-top: 50px;
   color: #777;
