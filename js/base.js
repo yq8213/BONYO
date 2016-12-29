@@ -5,7 +5,7 @@ $(function(){
 		$('.nav_toggle').toggleClass('nav_isopen');
 		$('.nav').toggleClass('nav_isin');
 		$('.container_body').toggleClass('container_bodyin');
-		$('body').toggleClass('body_hid');
+		$('.wrapper').toggleClass('body_hid');
 		return false;
 	});
 	$(document).click(function(e){
@@ -14,14 +14,14 @@ $(function(){
 			$('.nav_toggle').removeClass('nav_isopen');
 			$('.nav').removeClass('nav_isin');
 			$('.container_body').removeClass('container_bodyin');
-			$('body').removeClass('body_hid');
+			$('.wrapper').removeClass('body_hid');
 		}
 	});
 	$('.scroll_btn').click(function(){
 		$('.nav_toggle').removeClass('nav_isopen');
 		$('.nav').removeClass('nav_isin');
 		$('.container_body').removeClass('container_bodyin');
-		$('body').removeClass('body_hid');
+		$('.wrapper').removeClass('body_hid');
 	});
 	//卷軸滑動
 	$('.scroll_btn').click(function(){
@@ -46,15 +46,15 @@ $(function(){
 			$('.pop_message p').text('請確實填寫完畢再送出喔♡')
 		}
 		$('.pop_box').toggleClass('pop_show');
-		$('body').toggleClass('body_hid');
+		$('.wrapper').toggleClass('body_hid');
 	});
 });
 function error_box(){
 	$('.pop_box').toggleClass('pop_show');
-	$('body').toggleClass('body_hid');
+	$('.wrapper').toggleClass('body_hid');
 }
 function send_box(){
 	$('.pop_box').toggleClass('pop_show');
-	$('body').toggleClass('body_hid');
+	$('.wrapper').toggleClass('body_hid');
 	location.reload();
 }

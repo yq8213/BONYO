@@ -86,12 +86,10 @@ html html {
 body {
   overflow-x: hidden;
   font-size: 75%;
-  width: 100vw;
 }
-@media (min-width: 750px) {
-  body {
-    width: auto;
-  }
+
+.wrapper {
+  overflow-x: hidden;
 }
 
 .nav_position {
