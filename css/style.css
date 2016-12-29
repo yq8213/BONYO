@@ -310,6 +310,7 @@ footer {
 
 .pop_message {
   width: 200px;
+  height: 80px;
   background: rgba(68, 68, 68, 0.9);
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -342,4 +343,8 @@ footer {
 
 .body_hid {
   overflow: hidden;
+}
+
+.vh_hid {
+  height: 100vh;
 }

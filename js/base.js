@@ -5,7 +5,7 @@ $(function(){
 		$('.nav_toggle').toggleClass('nav_isopen');
 		$('.nav').toggleClass('nav_isin');
 		$('.container_body').toggleClass('container_bodyin');
-		$('.wrapper').toggleClass('body_hid');
+		$('.wrapper').toggleClass('body_hid vh_hid');
 		return false;
 	});
 	$(document).click(function(e){
@@ -14,14 +14,14 @@ $(function(){
 			$('.nav_toggle').removeClass('nav_isopen');
 			$('.nav').removeClass('nav_isin');
 			$('.container_body').removeClass('container_bodyin');
-			$('.wrapper').removeClass('body_hid');
+			$('.wrapper').removeClass('body_hid vh_hid');
 		}
 	});
 	$('.scroll_btn').click(function(){
 		$('.nav_toggle').removeClass('nav_isopen');
 		$('.nav').removeClass('nav_isin');
 		$('.container_body').removeClass('container_bodyin');
-		$('.wrapper').removeClass('body_hid');
+		$('.wrapper').removeClass('body_hid vh_hid');
 	});
 	//卷軸滑動
 	$('.scroll_btn').click(function(){
