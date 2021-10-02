@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沙巴betType自動抓取</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Saba Sports</h1>
+    <h3>BetType Selection Information</h3>
+    <button>download</button>
+</body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<!-- <script src="js/fileSaver.min.js"></script> -->
+<!-- <script src="js/download.js"></script> -->
+<script>
+    $(function() {
+    const url = 'https://github.com/Saba-sports/OddsDirectAPI_CN/wiki/BetType-Selection-Information'
+        $.ajax({
+            url: url,
+            type: 'GET',
+            async: false,
+            dataType: "jsonp",
+            jsonp: "callback",
+            success:function(res){console.log(res,'res')},
+            error:function(err){console.log(err,'error')},
+        }); 
+    });
+</script>
+</html>
